@@ -1,7 +1,12 @@
 import React from 'react'
 
-const ProjectId = ({ params }: { params: { projectId: string } }) => {
-	const { projectId } = params
+const ProjectId = async ({
+	params,
+}: {
+	params: Promise<{ projectId: string }>
+}) => {
+	const projectId = (await params).projectId
+
 	return <div>ProjectId: {projectId}</div>
 }
 
