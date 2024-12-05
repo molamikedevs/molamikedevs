@@ -8,7 +8,9 @@ const Home = () => {
 				<p className="sub-heading !max-w-3xl">Molamike devs</p>
 			</section>
 
-			<section className="section_container"></section>
+			<section className="section_container">
+				<h3>Hello world</h3>
+			</section>
 		</>
 	)
 }
