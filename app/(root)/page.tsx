@@ -10,6 +10,7 @@ const Home = () => {
 
 			<section className="section_container">
 				<h3>Hello world</h3>
+				<p>Commit</p>
 			</section>
 		</>
 	)
