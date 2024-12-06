@@ -7,6 +7,16 @@
     :root {
         --radius: 0.5rem;
     }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
 }
 
 @layer utilities {
@@ -15,25 +25,24 @@
     }
 
     .heading {
-        @apply uppercase bg-black px-6 py-3 font-lora font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5 rounded-lg;
+        @apply w-full uppercase bg-black px-6 py-3 font-lora font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5 rounded-lg;
     }
 
     .sub-heading {
-        @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
+        @apply w-full font-medium text-[20px] text-white max-w-2xl text-center break-words;
     }
 
     .section_container {
-        @apply px-6 py-10 max-w-7xl mx-auto;
+        @apply w-full px-6 py-10 max-w-7xl mx-auto;
     }
-
 
     .pattern {
         background-image: linear-gradient(
-                to right,
-                transparent 49.5%,
-                rgba(191, 131, 21, 0.2) 49.5%,
-                rgba(191, 131, 21, 0.9) 50.5%,
-                transparent 50.5%
+            to right,
+            transparent 49.5%,
+            rgba(191, 131, 21, 0.2) 49.5%,
+            rgba(191, 131, 21, 0.9) 50.5%,
+            transparent 50.5%
         );
         background-size: 5% 100%;
         background-position: center;
