@@ -5,13 +5,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Hello there!
+I am Lamin Foday, a student and a junior developer. I have experience with React, Next.Js, and React native with some backend tech stack, appwrite, supabase, and mongoDB. I am still learning to improve my skills, and I am open to joining a team to collaborate on projects.
 ```
 
 Open www.molamikedevs.com with your browser to see the result.
