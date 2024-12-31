@@ -37,15 +37,15 @@ const Home = () => {
 						Hire me
 					</button>
 
-					<div className="w-full lg:w-[65%] h-auto bg-gray-200 mt-10 sm:mt-8 mb-10 sm:mb-8 lg:mb-16 lg:mt-16 flex justify-center items-center gap-6 px-2 md:gap-8 rounded-sm shadow-lg py-6">
+					<div className="w-full lg:w-[65%] h-auto bg-gray-200 mt-10 sm:mt-8 mb-10 sm:mb-8 lg:mb-16 lg:mt-16 flex flex-col sm:flex-row justify-center items-center gap-4 px-4 sm:gap-6 md:gap-8 rounded-sm shadow-lg py-4 sm:py-6">
 						{boxContent.map((content, index) => (
 							<div
 								key={index}
-								className="flex flex-col justify-center items-center gap-2">
-								<h1 className="font-black text-lg sm:text-2xl">
+								className="flex flex-col justify-center items-center gap-1 sm:gap-2">
+								<h1 className="font-black text-base sm:text-lg md:text-2xl">
 									{content.title}
 								</h1>
-								<p className="text-sm font-medium text-gray-400">
+								<p className="text-xs sm:text-sm md:text-base font-medium text-gray-400">
 									{content.subText}
 								</p>
 							</div>
