@@ -25,7 +25,7 @@
     }
 
     .heading {
-        @apply w-full uppercase bg-black px-6 py-3 font-lora font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5 rounded-lg;
+        @apply w-full uppercase bg-black-200 px-6 py-3 font-lora font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5 rounded-lg;
     }
 
     .sub-heading {
@@ -48,4 +48,9 @@
         background-position: center;
         background-repeat: repeat-x;
     }
+}
+
+.navbar {
+    background: #FFFFFF;
+    color: #000;
 }

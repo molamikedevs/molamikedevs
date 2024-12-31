@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation'
 import { Menu as MenuIcon, X as XIcon } from 'lucide-react'
 
 const links = [
+	{ name: 'Home', route: '/' },
 	{ name: 'About', route: '/about' },
-	{ name: 'Contact', route: '/contact' },
 	{ name: 'Projects', route: '/projects' },
 	{ name: 'Services', route: '/services' },
 ]
@@ -20,11 +20,11 @@ const Navbar = () => {
 	const toggleMobileMenu = () => setMobileMenuOpen(prev => !prev)
 
 	return (
-		<div className="py-3 px-5 shadow-md font-lora">
-			<nav className="flex justify-between items-center">
+		<div className="py-3 px-5 font-lora navbar shadow-md">
+			<nav className="flex justify-between items-center px-6">
 				{/* Logo Section */}
-				<Link href="/" className="flex gap-3 items-center text-3xl">
-					<Image src="/logo.png" alt="logo" width={60} height={30} />
+				<Link href="/" className="flex gap-3 items-center text-2xl">
+					<Image src="/logo.png" alt="logo" width={40} height={30} />
 					<h1 className="hidden sm:block">Molamike Devs</h1>
 				</Link>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
 				</button>
 
 				{/* Desktop Links */}
-				<div className="hidden lg:flex items-center gap-6 text-lg font-lora font-medium">
+				<div className="hidden lg:flex items-center gap-6 text-xl font-lora font-medium">
 					{links.map((link, index) => (
 						<Link
 							href={link.route}
@@ -56,6 +56,9 @@ const Navbar = () => {
 							)}
 						</Link>
 					))}
+					<button className=" py-2 px-6 uppercase bg-blue-500 hover:bg-blue-800 rounded-sm hover:translate-x-1 text-white transition-all text-lg font-semibold leading-tight tracking-wider">
+						Contact Me
+					</button>
 				</div>
 			</nav>
 
