@@ -25,7 +25,9 @@ const Navbar = () => {
 				{/* Logo Section */}
 				<Link href="/" className="flex gap-3 items-center text-2xl">
 					<Image src="/logo.png" alt="logo" width={40} height={30} />
-					<h1 className="hidden sm:block">Molamike Devs</h1>
+					<h1 className="text-[#80C4E9] font-black text-3xl hidden sm:block">
+						Molamike Devs
+					</h1>
 				</Link>
 
 				{/* Hamburger Icon for Mobile */}
@@ -48,15 +50,15 @@ const Navbar = () => {
 							key={index}
 							className={clsx(
 								'relative',
-								pathname === link.route && 'text-blue-500'
+								pathname === link.route && 'text-[#80C4E9'
 							)}>
 							{link.name}
 							{pathname === link.route && (
-								<span className="absolute bottom-0 left-1/4 w-1/2 h-[2px] bg-blue-500"></span>
+								<span className="absolute bottom-0 left-1/4 w-1/2 h-[2px] bg-[#80C4E9"></span>
 							)}
 						</Link>
 					))}
-					<button className=" py-2 px-6 uppercase bg-blue-500 hover:bg-blue-800 rounded-sm hover:translate-x-1 text-white transition-all text-lg font-semibold leading-tight tracking-wider">
+					<button className=" py-2 px-6 uppercase bg-[#80C4E9] hover:bg-[#7BD3EA] rounded-sm hover:translate-x-1 text-white transition-all text-lg font-semibold leading-tight tracking-wider">
 						Contact Me
 					</button>
 				</div>
