@@ -54,7 +54,7 @@ const Home = () => {
 				</div>
 
 				{/* Right Section */}
-				<div className="w-full lg:w-1/2 flex justify-center items-center md:justify-center pt-6 lg:pt-0">
+				<div className="w-full lg:w-1/2 flex justify-center items-center md:justify-center pt-6 lg:pt-0 hover:translate-x-2 transition-all duration-300 cursor-pointer">
 					<div className="max-h-[25rem] md:max-h-[35rem] lg:max-h-[40rem] max-w-[25rem] md:max-w-[35rem] lg:max-w-[40rem] bg-gray-200 rounded-t-[5rem] lg:rounded-t-[10rem] shadow-lg flex justify-center items-center">
 						<div className="h-[90%] w-[90%] bg-gray-300 rounded-t-[5rem] lg:rounded-t-[10rem] shadow-sm flex justify-center items-center">
 							<Image

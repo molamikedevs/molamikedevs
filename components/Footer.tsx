@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = () => {
 	return (
-		<footer className="bg-black-200 text-white py-8">
+		<footer className="bg-gray-700 text-white py-8">
 			<div className="container mx-auto h-[15rem] flex flex-col md:flex-row justify-between items-center gap-6 px-4">
 				{/* Logo */}
 				<div className="flex flex-col items-center md:items-start">
@@ -21,7 +21,7 @@ const Footer = () => {
 
 				{/* Navbar Links */}
 				<nav className="flex flex-wrap justify-center gap-6">
-					{['About', 'Projects', 'Services', 'Contact'].map((item, index) => (
+					{['Home', 'About', 'Projects', 'Services'].map((item, index) => (
 						<Link
 							href={`/${item.toLowerCase()}`}
 							key={index}
