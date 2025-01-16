@@ -25,7 +25,7 @@
     }
 
     .heading {
-        @apply w-full uppercase bg-black-200 px-6 py-3 font-lora font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5 rounded-lg;
+        @apply text-center text-3xl text-white-100 mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg;
     }
 
     .sub-heading {

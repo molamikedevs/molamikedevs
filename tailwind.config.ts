@@ -13,21 +13,18 @@ export default {
 				xs: '475px',
 			},
 			colors: {
-				primary: {
-					'100': '#FFE8F0',
-					DEFAULT: '#024CAA',
-				},
-				secondary: '#FBE843',
 				black: {
-					'100': '#333333',
-					'200': '#141413',
-					'300': '#7D8087',
-					DEFAULT: '#000000',
+					DEFAULT: '#000',
+					100: '#000319',
+					200: 'rgba(17, 25, 40, 0.75)',
+					300: 'rgba(255, 255, 255, 0.125)',
 				},
 				white: {
-					'100': '#F7F7F7',
-					DEFAULT: '#FFFFFF',
+					DEFAULT: '#FFF',
+					100: '#BEC1DD',
+					200: '#C1C2D3',
 				},
+				secondary: '#FBE843',
 			},
 			fontFamily: {
 				lora: ['var(--font-lora)'],
