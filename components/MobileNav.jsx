@@ -14,7 +14,7 @@ const MobileNav = ({ onPress }) => {
 		{ name: 'Services', route: '/services' },
 	]
 	return (
-		<div className="lg:hidden mt-4 bg-black p-4 shadow-lg rounded-md">
+		<div className="lg:hidden mt-4 bg-black-100 p-4 shadow-xl rounded-md">
 			<ul className="flex flex-col gap-4 text-lg font-medium">
 				{links.map((link, index) => (
 					<li key={index}>

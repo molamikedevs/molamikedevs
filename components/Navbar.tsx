@@ -43,9 +43,9 @@ const Navbar = () => {
 						onClick={toggleMobileMenu}
 						aria-label="Toggle Mobile Menu">
 						{isMobileMenuOpen ? (
-							<XIcon className="w-[5rem] h-[5rem]" />
+							<XIcon className="w-16 h-16" />
 						) : (
-							<MenuIcon className="w-[5rem] h-[5rem]" />
+							<MenuIcon size={48} />
 						)}
 					</Button>
 
