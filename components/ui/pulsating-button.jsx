@@ -1,7 +1,9 @@
 'use client'
+
 import { cn } from '@/lib/utils'
-import React from 'react'
-export const PulsatingButton = React.forwardRef(function PulsatingButton(
+import React, { forwardRef } from 'react'
+
+export const PulsatingButton = forwardRef(function PulsatingButton(
 	{ className, children, pulseColor = '#80C4E9', duration = '1.5s', ...props },
 	ref
 ) {

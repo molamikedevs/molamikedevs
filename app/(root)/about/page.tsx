@@ -49,7 +49,7 @@ const About = () => {
 			</div>
 
 			{/* Right Section */}
-			<div className="w-full lg:w-1/2 flex justify-center items-center hidden md:flex">
+			<div className="w-full lg:w-1/2 justify-center items-center hidden md:flex">
 				<div className="max-h-[25rem] md:max-h-[35rem] lg:max-h-[40rem] max-w-[25rem] md:max-w-[35rem] lg:max-w-[40rem] bg-gray-200 rounded-t-[5rem] lg:rounded-t-[10rem] shadow-lg flex justify-center items-center">
 					<div className="h-[90%] w-[90%] bg-gray-300 rounded-t-[5rem] lg:rounded-t-[10rem] shadow-sm flex justify-center items-center">
 						<Image
