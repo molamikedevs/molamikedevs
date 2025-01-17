@@ -3,59 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { projects } from '@/constants/index'
+import DotPattern from '@/components/ui/dot-pattern'
 
 const Projects = () => {
 	const [filter, setFilter] = useState('All')
-
-	const projects = [
-		{
-			name: 'Hotel Management System',
-			photo: '/booking.jpeg',
-			url: '/projects/1',
-			subText:
-				'An amazing management system app that allows workers to update guest bookings based on guest demands. Full-stack website with CRUD functionality.',
-			category: 'Backend',
-		},
-		{
-			name: 'Blog Website',
-			photo: '/blog.jpg',
-			url: '/projects/2',
-			subText:
-				'A blog website that keeps you updated with the latest technology and world happenings.',
-			category: 'Frontend',
-		},
-		{
-			name: 'eCommerce Website',
-			photo: '/ecom.png',
-			url: 'https://ecommerce-com-gdx6.onrender.com/',
-			subText:
-				'An eCommerce website that enables users to shop from anywhere. Fully responsive with CRUD operations.',
-			category: 'Full Stack',
-		},
-		{
-			name: 'Nature',
-			photo: '/tour.jpg',
-			url: '/projects/4',
-			subText: 'A beautiful and user-friendly nature-themed eCommerce website.',
-			category: 'Frontend',
-		},
-		{
-			name: 'Landing Page',
-			photo: '/landing-page.png',
-			url: 'https://xora-landding-page.onrender.com/',
-			subText:
-				'A sleek and modern landing page design to showcase your services effectively.',
-			category: 'UI/UX',
-		},
-		{
-			name: 'Real Estate',
-			photo: '/est.jpeg',
-			url: '/projects/6',
-			subText:
-				'A real estate website that makes property searching easy and efficient.',
-			category: 'Full Stack',
-		},
-	]
 
 	const filteredProjects =
 		filter === 'All'
@@ -63,7 +15,7 @@ const Projects = () => {
 			: projects.filter(project => project.category === filter)
 
 	return (
-		<section className="bg-black-100 py-16 px-8">
+		<DotPattern className="bg-black-100 py-16 px-8">
 			{/* Centered Heading */}
 			<h2 className="heading">My Projects</h2>
 
@@ -76,7 +28,7 @@ const Projects = () => {
 						className={`px-4 py-2 rounded-md text-lg font-semibold ${
 							filter === category
 								? 'bg-[#80C4E9] text-white'
-								: 'bg-gray-200 hover:bg-gray-300'
+								: 'bg-black-200 text-white-100 hover:bg-black-100'
 						}`}>
 						{category}
 					</button>
@@ -88,7 +40,7 @@ const Projects = () => {
 				{filteredProjects.map((project, index) => (
 					<div
 						key={index}
-						className="group bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+						className="group bg-black-100 text-white-100 border border-black-200 shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
 						<Link href={project.url}>
 							<div className="relative w-full h-48">
 								<Image
@@ -108,7 +60,7 @@ const Projects = () => {
 					</div>
 				))}
 			</div>
-		</section>
+		</DotPattern>
 	)
 }
 

@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import DotPattern from '@/components/ui/dot-pattern'
 
 const Home = () => {
 	return (
-		<section className="relative bg-black-100 text-white-200 pt-16 md:pt-20 pb-8 md:pb-12 flex flex-col min-h-screen items-center justify-center">
+		<DotPattern className="relative bg-black-100 text-white-200 pt-16 md:pt-20 pb-8 md:pb-12 flex flex-col min-h-screen items-center justify-center">
 			{/* Dynamic Text Overlay */}
 			<div className="relative z-10 text-center">
 				<motion.h2
@@ -26,10 +27,10 @@ const Home = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1, delay: 1 }}>
-					Hi, I&apos;m Foday, a web developer based in Azerbaijan.
+					Hi, I&apos;m Kevin, a web developer based in Azerbaijan.
 				</motion.p>
 			</div>
-		</section>
+		</DotPattern>
 	)
 }
 

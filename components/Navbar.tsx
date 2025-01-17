@@ -6,16 +6,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu as MenuIcon, X as XIcon } from 'lucide-react'
 import Modal from './Modal'
-import { Button } from './ui/button'
+
 import MobileNav from '../components/MobileNav'
 import ContactForm from '../components/ContactForm'
-
-const links = [
-	{ name: 'Home', route: '/' },
-	{ name: 'About', route: '/about' },
-	{ name: 'Projects', route: '/projects' },
-	{ name: 'Services', route: '/services' },
-]
+import { links } from '@/constants'
+import { PulsatingButton } from './ui/pulsating-button'
 
 const Navbar = () => {
 	const pathname = usePathname()
@@ -27,7 +22,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<div className="bg-black-100 py-3 px-5 font-lora text-white-100 shadow-md">
+			<div className="fixed top-0 left-0 w-full bg-black-100 py-3 px-5 font-lora text-white-100 shadow-xl z-50">
 				<nav className="flex justify-between items-center px-6">
 					{/* Logo Section */}
 					<Link href="/" className="flex gap-3 items-center text-2xl">
@@ -38,7 +33,7 @@ const Navbar = () => {
 					</Link>
 
 					{/* Hamburger Icon for Mobile */}
-					<Button
+					<button
 						className="block lg:hidden"
 						onClick={toggleMobileMenu}
 						aria-label="Toggle Mobile Menu">
@@ -47,7 +42,7 @@ const Navbar = () => {
 						) : (
 							<MenuIcon size={48} />
 						)}
-					</Button>
+					</button>
 
 					{/* Desktop Links */}
 					<div className="hidden lg:flex items-center gap-6 text-xl font-lora font-medium">
@@ -65,11 +60,11 @@ const Navbar = () => {
 								)}
 							</Link>
 						))}
-						<div
-							className="py-2 px-6 uppercase bg-[#80C4E9] hover:bg-[#7BD3EA] rounded-sm hover:translate-x-1 text-black transition-all text-lg font-semibold leading-tight tracking-wider cursor-pointer"
+						<PulsatingButton
+							className="py-2 px-6 uppercase bg-black-100 text-white-100 hover:bg-black-100 rounded-sm hover:translate-x-1 transition-all text-lg font-semibold leading-tight tracking-wider cursor-pointer"
 							onClick={toggleModal}>
 							Contact Me
-						</div>
+						</PulsatingButton>
 					</div>
 				</nav>
 

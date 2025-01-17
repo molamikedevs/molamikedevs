@@ -4,15 +4,11 @@ import React from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
+import { links } from '@/constants'
 
 const MobileNav = ({ onPress }) => {
 	const pathname = usePathname()
-	const links = [
-		{ name: 'Home', route: '/' },
-		{ name: 'About', route: '/about' },
-		{ name: 'Projects', route: '/projects' },
-		{ name: 'Services', route: '/services' },
-	]
+
 	return (
 		<div className="lg:hidden mt-4 bg-black-100 p-4 shadow-xl rounded-md">
 			<ul className="flex flex-col gap-4 text-lg font-medium">
