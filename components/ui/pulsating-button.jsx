@@ -1,15 +1,15 @@
-'use client'
-
+import React from 'react'
 import { cn } from '@/lib/utils'
-import React, { forwardRef } from 'react'
 
-export const PulsatingButton = forwardRef(function PulsatingButton(
-	{ className, children, pulseColor = '#80C4E9', duration = '1.5s', ...props },
-	ref
-) {
+export const PulsatingButton = ({
+	className,
+	children,
+	pulseColor = '#80C4E9',
+	duration = '1.5s',
+	...props
+}) => {
 	return (
 		<button
-			ref={ref}
 			className={cn(
 				'relative flex cursor-pointer items-center justify-center rounded-lg bg-primary px-4 py-2 text-center text-primary-foreground',
 				className
@@ -20,6 +20,4 @@ export const PulsatingButton = forwardRef(function PulsatingButton(
 			<div className="absolute left-1/2 top-1/2 size-full -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-lg bg-inherit" />
 		</button>
 	)
-})
-
-PulsatingButton.displayName = 'PulsatingButton'
+}
