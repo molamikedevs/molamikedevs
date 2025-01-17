@@ -3,11 +3,17 @@
 import { cn } from '@/lib/utils'
 import { motion, useScroll, useSpring } from 'motion/react'
 
-interface ScrollProgressProps {
-	className?: string
-}
+// ScrollProgressProps type definition
+/**
+ * @typedef {Object} ScrollProgressProps
+ * @property {string} [className] - Optional className for styling.
+ */
 
-export default function ScrollProgress({ className }: ScrollProgressProps) {
+/**
+ * ScrollProgress component to display a scroll progress bar.
+ * @param {ScrollProgressProps} props - The component props.
+ */
+export default function ScrollProgress({ className }) {
 	const { scrollYProgress } = useScroll()
 
 	const scaleX = useSpring(scrollYProgress, {

@@ -1,19 +1,6 @@
 import { useId } from 'react'
 import { cn } from '@/lib/utils'
 
-interface DotPatternProps {
-	width?: number
-	height?: number
-	x?: number
-	y?: number
-	cx?: number
-	cy?: number
-	cr?: number
-	className?: string
-	children?: React.ReactNode // Add children prop
-	[key: string]: unknown
-}
-
 export function DotPattern({
 	width = 16,
 	height = 16,
@@ -23,9 +10,9 @@ export function DotPattern({
 	cy = 1,
 	cr = 1,
 	className,
-	children, // Accept children
+	children,
 	...props
-}: DotPatternProps) {
+}) {
 	const id = useId()
 
 	return (

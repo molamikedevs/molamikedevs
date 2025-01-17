@@ -1,17 +1,8 @@
 'use client'
 
-import { motion, useMotionTemplate, useMotionValue } from 'motion/react'
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import React, { useCallback, useEffect, useRef } from 'react'
-
 import { cn } from '@/lib/utils'
-
-interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
-	gradientSize?: number
-	gradientColor?: string
-	gradientOpacity?: number
-	gradientFrom?: string
-	gradientTo?: string
-}
 
 export function MagicCard({
 	children,
@@ -20,13 +11,14 @@ export function MagicCard({
 	gradientOpacity = 0.8,
 	gradientFrom = '#9E7AFF',
 	gradientTo = '#80C4E9',
-}: MagicCardProps) {
-	const cardRef = useRef<HTMLDivElement>(null)
+	...props
+}) {
+	const cardRef = useRef(null)
 	const mouseX = useMotionValue(-gradientSize)
 	const mouseY = useMotionValue(-gradientSize)
 
 	const handleMouseMove = useCallback(
-		(e: MouseEvent) => {
+		e => {
 			if (cardRef.current) {
 				const { left, top } = cardRef.current.getBoundingClientRect()
 				const clientX = e.clientX
@@ -39,7 +31,7 @@ export function MagicCard({
 	)
 
 	const handleMouseOut = useCallback(
-		(e: MouseEvent) => {
+		e => {
 			if (!e.relatedTarget) {
 				document.removeEventListener('mousemove', handleMouseMove)
 				mouseX.set(-gradientSize)
@@ -75,7 +67,8 @@ export function MagicCard({
 	return (
 		<div
 			ref={cardRef}
-			className={cn('group relative flex size-full rounded-xl', className)}>
+			className={cn('group relative flex size-full rounded-xl', className)}
+			{...props}>
 			<div className="absolute inset-px z-10 rounded-xl bg-background" />
 			<div className="relative z-30">{children}</div>
 			<motion.div

@@ -2,43 +2,42 @@
 
 import { cn } from '@/lib/utils'
 import { motion } from 'motion/react'
-import React, { HTMLAttributes, useCallback, useMemo } from 'react'
+import React from 'react'
 
-interface WarpBackgroundProps extends HTMLAttributes<HTMLDivElement> {
-	children: React.ReactNode
-	perspective?: number
-	beamsPerSide?: number
-	beamSize?: number
-	beamDelayMax?: number
-	beamDelayMin?: number
-	beamDuration?: number
-	gridColor?: string
-}
+// WarpBackgroundProps type definition
+/**
+ * @typedef {Object} WarpBackgroundProps
+ * @property {React.ReactNode} children - The child components to render inside the background.
+ * @property {number} [perspective=100] - Perspective value for the background.
+ * @property {number} [beamsPerSide=3] - Number of beams per side of the warp grid.
+ * @property {number} [beamSize=5] - Size of each beam as a percentage.
+ * @property {number} [beamDelayMax=3] - Maximum delay for the beams animation.
+ * @property {number} [beamDelayMin=0] - Minimum delay for the beams animation.
+ * @property {number} [beamDuration=3] - Duration of the beams animation.
+ * @property {string} [gridColor='bg-black-200'] - Grid color of the background.
+ * @property {string} [className] - Additional class names for styling.
+ */
 
-const Beam = ({
-	width,
-	x,
-	delay,
-	duration,
-}: {
-	width: string | number
-	x: string | number
-	delay: number
-	duration: number
-}) => {
+// Beam component
+/**
+ * @param {Object} props - The props for the Beam component.
+ * @param {string|number} props.width - Width of the beam.
+ * @param {string|number} props.x - X position of the beam.
+ * @param {number} props.delay - Delay for the beam animation.
+ * @param {number} props.duration - Duration of the beam animation.
+ */
+const Beam = ({ width, x, delay, duration }) => {
 	const hue = Math.floor(Math.random() * 360)
 	const ar = Math.floor(Math.random() * 10) + 1
 
 	return (
 		<motion.div
-			style={
-				{
-					'--x': `${x}`,
-					'--width': `${width}`,
-					'--aspect-ratio': `${ar}`,
-					'--background': `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
-				} as React.CSSProperties
-			}
+			style={{
+				'--x': `${x}`,
+				'--width': `${width}`,
+				'--aspect-ratio': `${ar}`,
+				'--background': `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
+			}}
 			className={`absolute left-[var(--x)] top-0 [aspect-ratio:1/var(--aspect-ratio)] [background:var(--background)] [width:var(--width)]`}
 			initial={{ y: '100cqmax', x: '-50%' }}
 			animate={{ y: '-100%', x: '-50%' }}
@@ -52,7 +51,11 @@ const Beam = ({
 	)
 }
 
-export const WarpBackground: React.FC<WarpBackgroundProps> = ({
+// WarpBackground component
+/**
+ * @param {WarpBackgroundProps} props - The props for the WarpBackground component.
+ */
+export const WarpBackground = ({
 	children,
 	perspective = 100,
 	className,
@@ -64,7 +67,7 @@ export const WarpBackground: React.FC<WarpBackgroundProps> = ({
 	gridColor = 'bg-black-200',
 	...props
 }) => {
-	const generateBeams = useCallback(() => {
+	const generateBeams = React.useCallback(() => {
 		const beams = []
 		const cellsPerSide = Math.floor(100 / beamSize)
 		const step = cellsPerSide / beamsPerSide
@@ -77,21 +80,19 @@ export const WarpBackground: React.FC<WarpBackgroundProps> = ({
 		return beams
 	}, [beamsPerSide, beamSize, beamDelayMax, beamDelayMin])
 
-	const topBeams = useMemo(() => generateBeams(), [generateBeams])
-	const rightBeams = useMemo(() => generateBeams(), [generateBeams])
-	const bottomBeams = useMemo(() => generateBeams(), [generateBeams])
-	const leftBeams = useMemo(() => generateBeams(), [generateBeams])
+	const topBeams = React.useMemo(() => generateBeams(), [generateBeams])
+	const rightBeams = React.useMemo(() => generateBeams(), [generateBeams])
+	const bottomBeams = React.useMemo(() => generateBeams(), [generateBeams])
+	const leftBeams = React.useMemo(() => generateBeams(), [generateBeams])
 
 	return (
 		<div className={cn('relative rounded p-20', className)} {...props}>
 			<div
-				style={
-					{
-						'--perspective': `${perspective}px`,
-						'--grid-color': gridColor,
-						'--beam-size': `${beamSize}%`,
-					} as React.CSSProperties
-				}
+				style={{
+					'--perspective': `${perspective}px`,
+					'--grid-color': gridColor,
+					'--beam-size': `${beamSize}%`,
+				}}
 				className={
 					'pointer-events-none absolute left-0 top-0 size-full overflow-hidden [clip-path:inset(0)] [container-type:size] [perspective:var(--perspective)] [transform-style:preserve-3d]'
 				}>
