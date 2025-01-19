@@ -4,7 +4,7 @@ import { approaches } from '@/constants'
 
 const MyApproach = () => {
 	return (
-		<DotPattern className="bg-black-100 px-8 py-12 w-screen">
+		<DotPattern className="bg-black-100 px-8 py-12">
 			<h2 className="heading">
 				My <span className=" text-tertiary">Approach</span>
 			</h2>
@@ -12,7 +12,7 @@ const MyApproach = () => {
 				{approaches.map(approach => (
 					<div
 						key={approach}
-						className="group w-full h-[20rem] text-white-100 bg-black-200 flex flex-col justify-center items-center rounded-xl shadow-md px-6 cursor-pointer hover:scale-105 transition-all duration-300 lg:w-[32%]">
+						className="group w-full h-[20rem] text-white-100 bg-black-200 flex flex-col justify-center items-center rounded-xl shadow-md px-6 cursor-pointer hover:scale-105 transition-all duration-300 lg:w-[34%]">
 						<h2 className="text-white font-black font-lora pb-4 text-3xl md:text-3xl lg:text-2xl group-hover:text-tertiary">
 							{approach.title}
 						</h2>
