@@ -20,7 +20,8 @@ const lora = localFont({
 })
 
 export const metadata = {
-	title: 'Molamike | Devs',
+	default: 'Molamike',
+	template: '%s | Molamike',
 	description:
 		'Molamike devs portfolio is created to showcase skills as a junior developer.',
 }

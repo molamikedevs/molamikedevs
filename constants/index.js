@@ -164,3 +164,21 @@ export const faqItems = [
 		answer: 'Currently, we operate exclusively online.',
 	},
 ]
+
+export const approaches = [
+	{
+		title: 'Planing & Strategy',
+		subText:
+			"We'ill collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements.",
+	},
+	{
+		title: 'Development & Progress Update',
+		subText:
+			'Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way.',
+	},
+	{
+		title: 'Development & Launch',
+		subText:
+			'This is where the magic happens! Based on the approved design, I&apos;ll translate everything into functional code, building your website from the ground up.',
+	},
+]

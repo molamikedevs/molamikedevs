@@ -11,7 +11,7 @@ const Home = () => {
 			{/* Dynamic Text Overlay */}
 			<div className="relative z-10 text-center">
 				<motion.h2
-					className="uppercase tracking-wider text-5xl md:text-6xl lg:text-7xl text-center text-white font-black font-lora"
+					className="uppercase tracking-wider text-3xl md:text-5xl lg:text-7xl text-center text-white font-black font-lora"
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1 }}>

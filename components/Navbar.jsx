@@ -85,16 +85,16 @@ const Navbar = () => {
 							</button>
 						))}
 						<div
-							className={`relative w-20 h-7 bg-black-200 border hover:border hover:border-tertext-tertiary dark:bg-gray-800 rounded-full p-1 cursor-pointer flex items-center`}
+							className={`relative w-20 h-7 bg-black-200 border hover:border-tertiary dark:bg-gray-800 rounded-full p-1 cursor-pointer flex items-center`}
 							onClick={toggleDarkMode}>
 							<div
 								className={`absolute w-7 h-7 rounded-full flex items-center justify-center shadow-md transition-transform duration-300 ease-in-out ${
 									isDarkMode
-										? 'transform translate-x-10 bg-white-100'
+										? 'transform translate-x-10 bg-tertiary'
 										: 'transform translate-x-0 bg-white-100'
 								}`}>
 								{isDarkMode ? (
-									<Moon size={16} className="text-black-200" />
+									<Moon size={16} className="text-black-100" />
 								) : (
 									<Sun size={16} className="text-black-100" />
 								)}

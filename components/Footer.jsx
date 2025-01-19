@@ -1,3 +1,4 @@
+import { links } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -21,12 +22,12 @@ const Footer = () => {
 
 				{/* Navbar Links */}
 				<nav className="flex flex-wrap justify-center gap-6">
-					{['Home', 'About', 'Projects', 'Services'].map((item, index) => (
+					{links.map(link => (
 						<Link
-							href={`/${item.toLowerCase()}`}
-							key={index}
-							className="text-lg hover:text-blue-400 transition-colors">
-							{item}
+							className="hover:text-tertiary transition-colors duration-300"
+							key={link}
+							href={link.route}>
+							{link.name}
 						</Link>
 					))}
 				</nav>
@@ -38,7 +39,7 @@ const Footer = () => {
 						aria-label="Facebook"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors">
+						className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors duration-300">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -53,7 +54,7 @@ const Footer = () => {
 						aria-label="Twitter"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="p-2 rounded-full bg-gray-800 hover:bg-blue-400 transition-colors">
+						className="p-2 rounded-full bg-gray-800 hover:bg-blue-400 transition-colors duration-300">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -68,7 +69,7 @@ const Footer = () => {
 						aria-label="LinkedIn"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="p-2 rounded-full bg-gray-800 hover:bg-blue-700 transition-colors">
+						className="p-2 rounded-full bg-gray-800 hover:bg-blue-700 transition-colors duration-300">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
