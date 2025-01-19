@@ -169,7 +169,7 @@ export const approaches = [
 	{
 		title: 'Planing & Strategy',
 		subText:
-			"We'ill collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements.",
+			"We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements.",
 	},
 	{
 		title: 'Development & Progress Update',
