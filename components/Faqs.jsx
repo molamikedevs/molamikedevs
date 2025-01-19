@@ -1,10 +1,10 @@
-import { WarpBackground } from '@/components/ui/warp-background'
 import React from 'react'
+import DotPattern from './ui/dot-pattern'
 
-const Services = () => {
+const Faqs = () => {
 	return (
-		<WarpBackground className="bg-black-100">
-			<h2 className="heading">Work Experience</h2>
+		<DotPattern className="bg-black-100 px-8 py-12">
+			<h2 className="heading">Frequently asked questions</h2>
 			<div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 p-4 rounded-lg shadow-md">
 				<div className="experience-div text-center md:text-left">
 					<h3 className="expTitle">Transnational/DSTV</h3>
@@ -31,8 +31,8 @@ const Services = () => {
 					</p>
 				</div>
 			</div>
-		</WarpBackground>
+		</DotPattern>
 	)
 }
 
-export default Services
+export default Faqs

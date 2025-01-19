@@ -15,7 +15,9 @@ const About = () => {
 	}
 
 	return (
-		<section className="relative bg-black-100 pt-16 md:pt-20 pb-8 md:pb-12 text-black-200 flex flex-col-reverse lg:flex-row gap-6 md:gap-12 min-h-screen items-center justify-center">
+		<section
+			id="about"
+			className="relative bg-black-100 pt-16 md:pt-20 pb-8 md:pb-12 text-black-200 flex flex-col-reverse lg:flex-row gap-6 md:gap-12 min-h-screen items-center justify-center px-8 py-12">
 			{/* Left Section */}
 			<div className="w-full lg:w-1/2 px-4 sm:px-8 lg:px-12 text-center lg:text-left flex flex-col items-center lg:items-start">
 				<h2 className="text-white-100 text-3xl sm:text-4xl font-extra-bold uppercase font-lora">
@@ -56,7 +58,7 @@ const About = () => {
 							src="/user.png"
 							alt="User Photo"
 							width={400}
-							height={400}
+							height={300}
 							className="object-contain rounded-xl"
 						/>
 					</div>

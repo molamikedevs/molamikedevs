@@ -2,7 +2,7 @@ export const links = [
 	{ name: 'Home', route: '/' },
 	{ name: 'About', route: '/about' },
 	{ name: 'Projects', route: '/projects' },
-	{ name: 'Services', route: '/services' },
+	{ name: 'Testimonial', route: '/testimonial' },
 ]
 
 export const boxContent = [
@@ -22,8 +22,8 @@ export const boxContent = [
 
 export const testimonials = [
 	{
-		name: 'Alhaji Kamar',
-		position: 'Manager',
+		name: 'Alhaji Foday Kamara',
+		position: 'Enterprise Pipeline Officer',
 		imgUrl: '/logo.png',
 		subText:
 			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
@@ -31,7 +31,7 @@ export const testimonials = [
 
 	{
 		name: 'Chernor Bah',
-		position: 'Procurement Manager',
+		position: 'Procurement Officer',
 		imgUrl: '/logo.png',
 		subText:
 			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
@@ -39,6 +39,13 @@ export const testimonials = [
 	{
 		name: 'Alie Sawray',
 		position: 'IT Assistant',
+		imgUrl: '/logo.png',
+		subText:
+			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
+	},
+	{
+		name: 'Osman Mansaray',
+		position: 'Junior Associate ',
 		imgUrl: '/logo.png',
 		subText:
 			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
@@ -92,5 +99,23 @@ export const projects = [
 		subText:
 			'A real estate website that makes property searching easy and efficient.',
 		category: 'Full Stack',
+	},
+]
+
+export const experiences = [
+	{
+		company: 'Transnational',
+		position: 'Dispatcher',
+		dsc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis vel veritatis, labore ut repellendus.',
+	},
+	{
+		company: 'Transnational',
+		position: 'IT Assistant',
+		dsc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis vel veritatis, labore ut repellendus.',
+	},
+	{
+		company: 'Molamike Devs',
+		position: 'Head',
+		dsc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis vel veritatis, labore ut repellendus.',
 	},
 ]

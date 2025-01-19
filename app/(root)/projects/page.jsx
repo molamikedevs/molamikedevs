@@ -15,7 +15,7 @@ const Projects = () => {
 			: projects.filter(project => project.category === filter)
 
 	return (
-		<DotPattern className="bg-black-100 py-16 px-8">
+		<DotPattern id="projects" className="bg-black-100 py-16 px-12">
 			{/* Centered Heading */}
 			<h2 className="heading">My Projects</h2>
 
@@ -40,7 +40,7 @@ const Projects = () => {
 				{filteredProjects.map((project, index) => (
 					<div
 						key={index}
-						className="group bg-black-100 text-white-100 border border-black-200 shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+						className="group max-w-md bg-black-200 text-white-100 border border-black-300 shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
 						<Link href={project.url}>
 							<div className="relative w-full h-48">
 								<Image
@@ -51,10 +51,10 @@ const Projects = () => {
 								/>
 							</div>
 							<div className="p-6">
-								<h3 className="text-xl font-bold mb-2 group-hover:text-[#80C4E9]">
+								<h3 className="text-xl text-white font-black mb-2 group-hover:text-[#80C4E9]">
 									{project.name}
 								</h3>
-								<p className="text-sm text-gray-600">{project.subText}</p>
+								<p className="text-sm text-white-100">{project.subText}</p>
 							</div>
 						</Link>
 					</div>

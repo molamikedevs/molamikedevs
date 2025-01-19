@@ -45,6 +45,7 @@
 
     html, body {
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
   .dark {
         --background: 0 0% 3.9%;
@@ -93,7 +94,7 @@
     }
 
     .experience-div {
-        @apply w-full min-h-[10rem] md:w-full md:h-[12rem]  bg-black-200 text-center text-white-100 flex flex-col items-center py-4 px-4 rounded-md shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer
+        @apply w-full min-h-[10rem] md:w-full md:h-[12rem]  md:text-left  bg-black-200 text-center text-white-100 flex flex-col items-center py-4 px-4 rounded-md shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer
     }
 
     .testimonial-div {

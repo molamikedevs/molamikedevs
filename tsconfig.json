@@ -32,7 +32,17 @@
 		"components/ui/pulsating-button.jsx",
 		"components/ui/marquee.jsx",
 		"components/ui/magic-card.jsx",
-		"components/ui/dot-pattern.jsx"
+		"components/ui/dot-pattern.jsx",
+		"components/Navbar.jsx",
+		"app/(root)/layout.jsx",
+		"app/loading.jsx",
+		"app/layout.ssx",
+		"app/projects/[projectId]/page.jsx",
+		"app/(root)/about/page.jsx",
+		"app/projects/page.jsx",
+		"app/(root)/testimonial/page.jsx",
+		"app/home/page.jsx",
+		"components/Footer.jsx"
 	],
 	"exclude": ["node_modules"]
 }
