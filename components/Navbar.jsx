@@ -49,7 +49,7 @@ const Navbar = () => {
 						onClick={() => handleNavClick('home', '/')}
 						className="flex gap-3 items-center text-2xl cursor-pointer">
 						<Image src="/b-logo.png" alt="logo" width={40} height={30} />
-						<span className="text-[#80C4E9] font-black text-3xl hidden sm:block">
+						<span className="text-tertiary font-black text-3xl hidden sm:block">
 							Molamike Devs
 						</span>
 					</button>
@@ -76,16 +76,16 @@ const Navbar = () => {
 								}
 								className={clsx(
 									'relative text-left',
-									pathname === link.route && 'text-[#80C4E9]'
+									pathname === link.route && 'text-tertiary'
 								)}>
 								{link.name}
 								{pathname === link.route && (
-									<span className="absolute bottom-0 left-1/4 w-1/2 h-[2px] bg-[#80C4E9]"></span>
+									<span className="absolute bottom-0 left-1/4 w-1/2 h-[2px] bg-tertiary"></span>
 								)}
 							</button>
 						))}
 						<div
-							className={`relative w-20 h-7 bg-black-200 border hover:border hover:border-[#80C4E9] dark:bg-gray-800 rounded-full p-1 cursor-pointer flex items-center`}
+							className={`relative w-20 h-7 bg-black-200 border hover:border hover:border-tertext-tertiary dark:bg-gray-800 rounded-full p-1 cursor-pointer flex items-center`}
 							onClick={toggleDarkMode}>
 							<div
 								className={`absolute w-7 h-7 rounded-full flex items-center justify-center shadow-md transition-transform duration-300 ease-in-out ${

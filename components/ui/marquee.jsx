@@ -6,20 +6,23 @@ export default function Marquee({
 	pauseOnHover = true,
 	children,
 	vertical = false,
-	repeat = 4,
+	repeat = 2,
+	speed = '25s', // Increased speed
 	...props
 }) {
 	return (
 		<div
 			{...props}
 			className={cn(
-				'group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]',
+				'group flex overflow-hidden [--duration:var(--speed)] [--gap:1rem] [gap:var(--gap)]',
 				{
 					'flex-row': !vertical,
 					'flex-col': vertical,
 				},
 				className
-			)}>
+			)}
+			style={{ '--speed': speed }} // Inline CSS for speed
+		>
 			{Array(repeat)
 				.fill(0)
 				.map((_, i) => (

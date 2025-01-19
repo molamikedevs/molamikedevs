@@ -14,7 +14,7 @@ const MobileNav = ({ onPress, activeRoute }) => {
 							className={clsx(
 								'block py-2 px-4 rounded-md w-full text-left',
 								activeRoute === link.route
-									? 'bg-[#80C4E9] text-white'
+									? 'bg-tertiary text-white'
 									: 'hover:bg-gray-100'
 							)}>
 							{link.name}

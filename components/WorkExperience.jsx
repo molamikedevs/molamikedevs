@@ -5,7 +5,9 @@ import React from 'react'
 const WorkExperience = () => {
 	return (
 		<WarpBackground className="bg-black-100 px-8 py-12">
-			<h2 className="heading">Work Experience</h2>
+			<h2 className="heading">
+				My Work <span className=" text-tertiary">Experience</span>
+			</h2>
 			<div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 p-4 rounded-lg shadow-md">
 				{experiences.map(workExp => (
 					<div key={workExp} className="experience-div">

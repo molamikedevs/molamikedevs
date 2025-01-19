@@ -42,7 +42,8 @@
 		"app/projects/page.jsx",
 		"app/(root)/testimonial/page.jsx",
 		"app/home/page.jsx",
-		"components/Footer.jsx"
+		"components/Footer.jsx",
+		"components/ui/flickering-grid.jsx"
 	],
 	"exclude": ["node_modules"]
 }

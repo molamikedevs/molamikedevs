@@ -24,11 +24,12 @@
 		"init": "^0.1.2",
 		"lottie-web": "^5.12.2",
 		"lucide-react": "^0.462.0",
-		"motion": "^11.18.0",
+		"motion": "^11.18.1",
 		"next": "15.0.3",
 		"react": "19.0.0-rc-66855b96-20241106",
 		"react-dom": "19.0.0-rc-66855b96-20241106",
 		"react-lottie": "^1.2.10",
+		"react-slidedown": "^2.4.7",
 		"shadcn": "^2.1.8",
 		"tailwind-merge": "^2.6.0",
 		"tailwindcss-animate": "^1.0.7"

@@ -17,7 +17,9 @@ const Projects = () => {
 	return (
 		<DotPattern id="projects" className="bg-black-100 py-16 px-12">
 			{/* Centered Heading */}
-			<h2 className="heading">My Projects</h2>
+			<h2 className="heading">
+				My Latest <span className="text-tertiary">Projects</span>
+			</h2>
 
 			{/* Responsive Filter Section */}
 			<div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -27,7 +29,7 @@ const Projects = () => {
 						onClick={() => setFilter(category)}
 						className={`px-4 py-2 rounded-md text-lg font-semibold ${
 							filter === category
-								? 'bg-[#80C4E9] text-white'
+								? 'bg-tertiary text-white'
 								: 'bg-black-200 text-white-100 hover:bg-black-100'
 						}`}>
 						{category}
@@ -51,7 +53,7 @@ const Projects = () => {
 								/>
 							</div>
 							<div className="p-6">
-								<h3 className="text-xl text-white font-black mb-2 group-hover:text-[#80C4E9]">
+								<h3 className="text-xl text-white font-black mb-2 group-hover:text-tertiary">
 									{project.name}
 								</h3>
 								<p className="text-sm text-white-100">{project.subText}</p>

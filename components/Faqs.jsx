@@ -1,34 +1,89 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import { Plus, Minus } from 'lucide-react' // Import Lucide icons
 import DotPattern from './ui/dot-pattern'
+import { faqItems } from '@/constants'
 
 const Faqs = () => {
+	const [activeIndex, setActiveIndex] = useState(null)
+
+	const toggleAccordion = index => {
+		setActiveIndex(index === activeIndex ? null : index)
+	}
+
 	return (
 		<DotPattern className="bg-black-100 px-8 py-12">
-			<h2 className="heading">Frequently asked questions</h2>
-			<div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 p-4 rounded-lg shadow-md">
-				<div className="experience-div text-center md:text-left">
-					<h3 className="expTitle">Transnational/DSTV</h3>
-					<p className="font-black underline text-xl mb-2">Dispatcher</p>
-					<p className="subText">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-						debitis vel veritatis, labore ut repellendus.
-					</p>
+			<h2 className="heading">
+				Frequently Asked <span className="text-tertiary">Questions</span>
+			</h2>
+			<div className="flex flex-col md:flex-row gap-8">
+				{/* Left Column */}
+				<div className="flex-1 space-y-4">
+					{faqItems.slice(0, 5).map((item, index) => (
+						<div
+							key={index}
+							className={`border border-gray-600 rounded-lg overflow-hidden ${
+								activeIndex === index ? 'bg-gray-800' : 'bg-black-100'
+							}`}>
+							<button
+								onClick={() => toggleAccordion(index)}
+								className={`w-full flex items-center justify-between px-4 py-2 text-white-100 font-black focus:outline-none ${
+									activeIndex === index ? 'text-tertiary' : 'text-white-100'
+								}`}>
+								<span
+									className={`font-black font-lora text-md ${
+										activeIndex === index ? 'text-tertiary' : 'text-white-100'
+									}`}>
+									{item.question}
+								</span>
+								{activeIndex === index ? (
+									<Minus className="w-5 h-5 text-white" />
+								) : (
+									<Plus className="w-5 h-5 text-white" />
+								)}
+							</button>
+							{activeIndex === index && (
+								<div className="px-4 py-2 text-gray-300">{item.answer}</div>
+							)}
+						</div>
+					))}
 				</div>
-				<div className="experience-div text-center md:text-left">
-					<h3 className="expTitle">MultiChoice Africa</h3>
-					<p className="font-black underline text-xl mb-2">IT Assistant</p>
-					<p className="subText">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-						debitis vel veritatis, labore ut repellendus.
-					</p>
-				</div>
-				<div className="experience-div text-center md:text-left">
-					<h3 className="expTitle">Molamike Devs</h3>
-					<p className="font-black underline text-xl mb-2">Team Head</p>
-					<p className="subText">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-						debitis vel veritatis, labore ut repellendus.
-					</p>
+
+				{/* Separator */}
+				<div className="hidden md:block w-px bg-gray-700"></div>
+
+				{/* Right Column */}
+				<div className="flex-1 space-y-4">
+					{faqItems.slice(5).map((item, index) => (
+						<div
+							key={index + 5}
+							className={`border border-gray-600 rounded-lg overflow-hidden ${
+								activeIndex === index + 5 ? 'bg-gray-800' : 'bg-black-100'
+							}`}>
+							<button
+								onClick={() => toggleAccordion(index + 5)}
+								className={`w-full flex items-center justify-between px-4 py-2 text-white font-semibold focus:outline-none ${
+									activeIndex === index + 5 ? 'text-tertiary' : 'text-white'
+								}`}>
+								<span
+									className={`font-black font-lora text-md ${
+										activeIndex === index + 5
+											? 'text-tertiary'
+											: 'text-white-100'
+									}`}>
+									{item.question}
+								</span>
+								{activeIndex === index + 5 ? (
+									<Minus className="w-5 h-5 text-white" />
+								) : (
+									<Plus className="w-5 h-5 text-white" />
+								)}
+							</button>
+							{activeIndex === index + 5 && (
+								<div className="px-4 py-2 text-gray-300">{item.answer}</div>
+							)}
+						</div>
+					))}
 				</div>
 			</div>
 		</DotPattern>
