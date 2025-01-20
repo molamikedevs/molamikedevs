@@ -8,12 +8,12 @@ const WorkExperience = () => {
 			<h2 className="heading">
 				My Work <span className=" text-tertiary">Experience</span>
 			</h2>
-			<div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 p-4 rounded-lg shadow-md">
+			<div className="bg-black-300 flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 p-4 rounded-lg shadow-md">
 				{experiences.map(workExp => (
 					<div key={workExp} className="experience-div">
 						<h3 className="expTitle">{workExp.company}</h3>
-						<p className="font-medium underline text-sm mb-2 text-white-100">
-							{workExp.position}
+						<p className="font-medium text-xs mb-2 text-white-100">
+							position: {workExp.position}
 						</p>
 						<p className="subText">{workExp.dsc}</p>
 					</div>

@@ -1,5 +1,8 @@
 import './globals.css'
 import localFont from 'next/font/local'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const lora = localFont({
 	src: [
@@ -29,7 +32,13 @@ export const metadata = {
 const MainLayout = ({ children }) => {
 	return (
 		<html lang="en">
-			<body className={`${lora.variable} antialiased`}>{children}</body>
+			<body className={`${lora.variable} antialiased`}>
+				<ToastContainer
+					className="bg-black-200 text-white-100"
+					position="top-right"
+				/>
+				{children}
+			</body>
 		</html>
 	)
 }

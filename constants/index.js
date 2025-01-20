@@ -1,3 +1,5 @@
+import { CodeXml, LaptopMinimal, Server } from 'lucide-react'
+
 export const links = [
 	{ name: 'Home', route: '/' },
 	{ name: 'About', route: '/about' },
@@ -104,18 +106,21 @@ export const projects = [
 
 export const experiences = [
 	{
-		company: 'Transnational',
-		position: 'Dispatcher',
+		company: 'Upwork',
+		logo: <LaptopMinimal size={30} className="text-tertiary text-center" />,
+		position: 'Freelancer',
 		dsc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis vel veritatis, labore ut repellendus.',
 	},
 	{
 		company: 'Transnational',
+		logo: <CodeXml size={30} className="text-tertiary text-center" />,
 		position: 'IT Assistant',
 		dsc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis vel veritatis, labore ut repellendus.',
 	},
 	{
 		company: 'Molamike Devs',
-		position: 'Head',
+		logo: <Server size={30} className="text-tertiary text-center" />,
+		position: 'Junior full stack developer',
 		dsc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis vel veritatis, labore ut repellendus.',
 	},
 ]
@@ -179,6 +184,6 @@ export const approaches = [
 	{
 		title: 'Development & Launch',
 		subText:
-			'This is where the magic happens! Based on the approved design, I&apos;ll translate everything into functional code, building your website from the ground up.',
+			"This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up.",
 	},
 ]
