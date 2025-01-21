@@ -1,5 +1,7 @@
+'use client'
 import { useId } from 'react'
 import { cn } from '@/lib/utils'
+import { useTheme } from 'next-themes'
 
 export function DotPattern({
 	width = 16,
@@ -14,13 +16,16 @@ export function DotPattern({
 	...props
 }) {
 	const id = useId()
+	const { theme } = useTheme() // Access theme state
 
 	return (
 		<div className={cn('relative', className)} {...props}>
 			{/* Background SVG */}
 			<svg
 				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 h-full w-full fill-black-200">
+				className={`pointer-events-none absolute inset-0 h-full w-full ${
+					theme === 'dark' ? 'fill-black-200' : 'fill-white'
+				}`}>
 				<defs>
 					<pattern
 						id={id}

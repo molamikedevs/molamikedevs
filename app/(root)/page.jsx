@@ -1,17 +1,25 @@
 'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import DotPattern from '@/components/ui/dot-pattern'
+import { useTheme } from 'next-themes'
 
 const Home = () => {
+	const { theme } = useTheme() // Access theme state
+
 	return (
 		<DotPattern
 			id="home"
-			className="relative bg-black-100 text-white-200 pt-16 md:pt-20 pb-8 md:pb-12 flex flex-col min-h-screen items-center justify-center">
+			className={`${
+				theme === 'dark'
+					? 'bg-black-100 text-white-100'
+					: 'bg-white text-black-100'
+			} relative pt-16 md:pt-20 pb-8 md:pb-12 flex flex-col min-h-screen items-center justify-center`}>
 			{/* Dynamic Text Overlay */}
 			<div className="relative z-10 text-center">
 				<motion.h2
-					className="uppercase tracking-wider text-3xl md:text-5xl lg:text-7xl text-center text-white font-black font-lora"
+					className="uppercase tracking-wider text-3xl md:text-5xl lg:text-7xl text-center font-black font-lora"
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1 }}>

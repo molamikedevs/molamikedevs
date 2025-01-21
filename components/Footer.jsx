@@ -3,8 +3,10 @@ import { links } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { useTheme } from 'next-themes'
 
 const Footer = () => {
+	const { resolvedTheme } = useTheme()
 	const handleScroll = id => {
 		const section = document.getElementById(id)
 		if (section) {
@@ -13,23 +15,38 @@ const Footer = () => {
 	}
 
 	return (
-		<footer role="contentInfo" className="bg-black-100 text-white py-8">
+		<footer
+			role="contentInfo"
+			className={`${
+				resolvedTheme === 'dark'
+					? 'bg-black-100 text-white'
+					: 'bg-gray-100 text-black-100'
+			}  py-8"`}>
 			<div className="container mx-auto h-[15rem] flex flex-col md:flex-row justify-between items-center gap-6 px-4">
 				{/* Logo */}
 				<div className="flex flex-col items-center md:items-start">
-					<Image
-						src="/b-logo.png"
-						alt="Molamike Devs Logo"
-						width={80}
-						height={40}
-					/>
+					{resolvedTheme === 'dark' ? (
+						<Image
+							src="/b-logo.png"
+							alt="Molamike Devs Logo"
+							width={80}
+							height={40}
+						/>
+					) : (
+						<Image
+							src="/logo.png"
+							alt="Molamike Devs Logo"
+							width={80}
+							height={40}
+						/>
+					)}
 					<p className="text-sm mt-2">
 						© {new Date().getFullYear()} Molamike Devs. All rights reserved.
 					</p>
 				</div>
 
 				{/* Navbar Links */}
-				<nav className="flex flex-wrap justify-center gap-6">
+				<nav className="flex flex-wrap justify-center gap-6 text-xl font-lora font-black">
 					{links.map(link => (
 						<button
 							key={link.name}
@@ -47,7 +64,9 @@ const Footer = () => {
 						aria-label="Facebook"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-colors duration-300">
+						className={`${
+							resolvedTheme === 'dark' ? 'bg-black-300' : 'bg-gray-300'
+						} p-2 rounded-full  hover:bg-blue-700 transition-colors duration-300`}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -62,7 +81,9 @@ const Footer = () => {
 						aria-label="Twitter"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="p-2 rounded-full bg-gray-800 hover:bg-blue-400 transition-colors duration-300">
+						className={`${
+							resolvedTheme === 'dark' ? 'bg-black-300' : 'bg-gray-300'
+						} p-2 rounded-full  hover:bg-blue-700 transition-colors duration-300`}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -77,7 +98,9 @@ const Footer = () => {
 						aria-label="LinkedIn"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="p-2 rounded-full bg-gray-800 hover:bg-blue-700 transition-colors duration-300">
+						className={`${
+							resolvedTheme === 'dark' ? 'bg-black-300' : 'bg-gray-300'
+						} p-2 rounded-full  hover:bg-blue-700 transition-colors duration-300`}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"

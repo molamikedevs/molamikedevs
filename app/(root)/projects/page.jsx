@@ -5,9 +5,11 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { projects } from '@/constants/index'
 import DotPattern from '@/components/ui/dot-pattern'
+import { useTheme } from 'next-themes'
 
 const Projects = () => {
 	const [filter, setFilter] = useState('All')
+	const { resolvedTheme } = useTheme() // Use resolvedTheme for consistent behavior
 
 	const filteredProjects =
 		filter === 'All'
@@ -15,9 +17,18 @@ const Projects = () => {
 			: projects.filter(project => project.category === filter)
 
 	return (
-		<DotPattern id="projects" className="bg-black-100 py-16 px-12">
+		<DotPattern
+			id="projects"
+			className={`${
+				resolvedTheme === 'dark'
+					? 'bg-black-100 text-white-100'
+					: 'bg-white text-black-100'
+			} py-16 px-12`}>
 			{/* Centered Heading */}
-			<h2 className="heading">
+			<h2
+				className={`text-center text-3xl mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg ${
+					resolvedTheme === 'dark' ? 'text-white' : 'text-black'
+				}`}>
 				My Latest <span className="text-tertiary">Projects</span>
 			</h2>
 
@@ -27,10 +38,12 @@ const Projects = () => {
 					<button
 						key={category}
 						onClick={() => setFilter(category)}
-						className={`px-4 py-2 rounded-md text-lg font-semibold ${
+						className={`px-4 py-2 rounded-md text-lg font-semibold transition-all duration-300 ${
 							filter === category
 								? 'bg-tertiary text-white'
-								: 'bg-black-200 text-white-100 hover:bg-black-100'
+								: resolvedTheme === 'dark'
+								? 'bg-black-200 text-white hover:bg-black-100'
+								: 'bg-gray-200 text-black hover:bg-gray-300'
 						}`}>
 						{category}
 					</button>
@@ -42,7 +55,11 @@ const Projects = () => {
 				{filteredProjects.map((project, index) => (
 					<div
 						key={index}
-						className="group max-w-md bg-black-200 text-white-100 border border-black-300 shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+						className={`group max-w-md border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ${
+							resolvedTheme === 'dark'
+								? 'bg-black-200 border-black-200'
+								: 'bg-gray-100 border-white-200'
+						}`}>
 						<Link href={project.url}>
 							<div className="relative w-full h-48">
 								<Image
@@ -53,10 +70,18 @@ const Projects = () => {
 								/>
 							</div>
 							<div className="p-6">
-								<h3 className="text-xl text-white font-black mb-2 group-hover:text-tertiary">
+								<h3
+									className={`text-xl font-black mb-2 group-hover:text-tertiary ${
+										resolvedTheme === 'dark' ? 'text-white' : 'text-black'
+									}`}>
 									{project.name}
 								</h3>
-								<p className="text-sm text-white-100">{project.subText}</p>
+								<p
+									className={`text-sm ${
+										resolvedTheme === 'dark' ? 'text-gray-400' : 'text-gray-700'
+									}`}>
+									{project.subText}
+								</p>
 							</div>
 						</Link>
 					</div>

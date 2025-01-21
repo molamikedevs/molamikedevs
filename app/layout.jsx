@@ -2,6 +2,8 @@ import './globals.css'
 import localFont from 'next/font/local'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { GlobalContextProvider } from '../constants/GlobalContext'
+import { ThemeProvider } from 'next-themes'
 
 
 const lora = localFont({
@@ -33,11 +35,15 @@ const MainLayout = ({ children }) => {
 	return (
 		<html lang="en">
 			<body className={`${lora.variable} antialiased`}>
-				<ToastContainer
-					className="bg-black-200 text-white-100"
-					position="top-right"
-				/>
-				{children}
+				<GlobalContextProvider>
+					<ThemeProvider attribute="class" defaultTheme="dark">
+						<ToastContainer
+							className="bg-black-200 text-white-100"
+							position="top-right"
+						/>
+						{children}
+					</ThemeProvider>
+				</GlobalContextProvider>
 			</body>
 		</html>
 	)

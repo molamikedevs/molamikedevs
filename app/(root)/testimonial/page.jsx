@@ -4,17 +4,28 @@ import DotPattern from '@/components/ui/dot-pattern'
 import Marquee from '@/components/ui/marquee'
 import Image from 'next/image'
 import { testimonials } from '@/constants'
+import { useTheme } from 'next-themes'
 
 const Testimonial = () => {
 	const [expanded, setExpanded] = useState({}) // Track expanded states for each testimonial
+	const { resolvedTheme } = useTheme()
 
 	const toggleExpand = index => {
 		setExpanded(prev => ({ ...prev, [index]: !prev[index] }))
 	}
 
 	return (
-		<DotPattern id="testimonial" className="bg-black-100 px-8 py-12">
-			<h2 className="heading">
+		<DotPattern
+			id="testimonial"
+			className={`${
+				resolvedTheme === 'dark'
+					? 'bg-black-100 text-white-100'
+					: 'bg-white text-black-100'
+			} py-16 px-12`}>
+			<h2
+				className={`text-center text-3xl mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg ${
+					resolvedTheme === 'dark' ? 'text-white' : 'text-black'
+				}`}>
 				Feedback from <span className="text-tertiary">Clients</span>
 			</h2>
 			<Marquee className="mt-8" speed="25s">
@@ -24,7 +35,11 @@ const Testimonial = () => {
 					{testimonials.map((testimonial, index) => (
 						<div
 							key={index}
-							className="bg-black-200 p-6 rounded-lg shadow-lg max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg">
+							className={`${
+								resolvedTheme === 'dark'
+									? 'bg-black-200 text-white-100'
+									: 'bg-gray-100 border border-white-200 text-black-200'
+							}  p-6 rounded-lg shadow-lg max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg`}>
 							<div className="grid grid-cols-[auto_1fr] gap-4 items-center">
 								{/* Image */}
 								<Image
@@ -36,7 +51,12 @@ const Testimonial = () => {
 								/>
 								{/* User Info */}
 								<div>
-									<p className="text-lg font-bold text-white">
+									<p
+										className={`${
+											resolvedTheme === 'dark'
+												? 'text-white-100'
+												: 'text-black-100'
+										} text-lg font-bold`}>
 										{testimonial.name}
 									</p>
 									<small className="text-gray-400 font-medium">
@@ -45,7 +65,7 @@ const Testimonial = () => {
 								</div>
 							</div>
 							{/* Testimonial Text */}
-							<p className="mt-4 text-gray-300 leading-relaxed">
+							<p className="mt-4 leading-relaxed">
 								{expanded[index]
 									? testimonial.subText
 									: `${testimonial.subText.slice(0, 100)}...`}

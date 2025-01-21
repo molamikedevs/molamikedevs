@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 		<div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
 			<div
 				ref={ref}
-				className="bg-black-100 border border-white-100 w-[70%] h-[75%] rounded-lg shadow-lg relative flex flex-col items-center justify-center">
+				className="bg-black-100 border border-white-100 w-[70%] h-[80%] rounded-lg shadow-lg relative flex flex-col items-center justify-center">
 				<button
 					onClick={onClose}
 					className="absolute top-4 right-4 text-white-300 hover:text-black">
