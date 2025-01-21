@@ -127,48 +127,57 @@ export const experiences = [
 
 export const faqItems = [
 	{
-		question: 'What is your refund policy?',
+		question: 'What programming languages do you specialize in?',
 		answer:
-			'Our refund policy allows for returns within 30 days of purchase with a valid receipt.',
+			'I specialize in JavaScript, HTML, and CSS, with experience in frameworks like React, Next.js and Node.js.',
 	},
 	{
-		question: 'How long does shipping take?',
+		question: 'What type of projects have you worked on?',
 		answer:
-			'Shipping typically takes 5-7 business days, depending on your location.',
+			'I have worked on responsive websites, e-commerce platforms, and interactive web applications.',
 	},
 	{
-		question: 'Do you offer international shipping?',
-		answer: 'Yes, we offer international shipping to most countries.',
+		question: 'Do you have experience with version control?',
+		answer:
+			'Yes, I use Git and GitHub to manage code and collaborate with teams.',
 	},
 	{
-		question: 'Can I cancel my order?',
-		answer: 'Orders can be canceled within 24 hours of purchase.',
+		question: 'What tools do you use for web development?',
+		answer:
+			'I use VS Code, Chrome Developer Tools, and libraries like Sass Css, Styled Css and Tailwind CSS.',
 	},
 	{
-		question: 'Do you provide customer support?',
-		answer: 'Yes, our customer support is available 24/7 via chat and email.',
+		question: 'Can you optimize websites for performance?',
+		answer:
+			'Yes, I focus on optimizing load times, improving SEO, and using modern web techniques.',
 	},
 	{
-		question: 'What payment methods do you accept?',
-		answer: 'We accept Visa, MasterCard, PayPal, and several other options.',
+		question: 'Are you familiar with APIs?',
+		answer:
+			'Yes, I have experience working with RESTful APIs and integrating third-party services.',
 	},
 	{
-		question: 'Do you offer discounts for bulk purchases?',
-		answer: 'Yes, we offer discounts for orders exceeding a certain quantity.',
+		question: 'Do you have experience with responsive design?',
+		answer:
+			'Yes, I ensure websites are mobile-friendly and work seamlessly on all devices.',
 	},
 	{
-		question: 'Is my personal information secure?',
-		answer: 'Yes, we use advanced encryption to protect your data.',
+		question: 'What projects are you most proud of?',
+		answer:
+			'I developed a portfolio website showcasing my skills and an interactive to-do list app.',
 	},
 	{
-		question: 'Can I track my order?',
-		answer: 'Yes, you will receive a tracking link once your order ships.',
+		question: 'Do you have experience with databases?',
+		answer:
+			'Yes, I have worked with databases like MongoDB and Supabase, Appwrite and Sanity for web applications.',
 	},
 	{
-		question: 'Do you have a physical store?',
-		answer: 'Currently, we operate exclusively online.',
+		question: 'What is your approach to debugging?',
+		answer:
+			'I use browser developer tools, console logs, and debugging features in IDEs to resolve issues.',
 	},
 ]
+
 
 export const approaches = [
 	{
