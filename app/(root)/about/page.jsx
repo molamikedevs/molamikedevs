@@ -11,12 +11,6 @@ const About = () => {
 	const { theme } = useTheme() // Use resolvedTheme for SSR consistency
 	const { toggleModal } = useGlobalProvider()
 
-	const handleDownload = () => {
-		const link = document.createElement('a')
-		link.href = '/cv.pdf'
-		link.download = 'cv.pdf'
-		link.click()
-	}
 
 	return (
 		<section
