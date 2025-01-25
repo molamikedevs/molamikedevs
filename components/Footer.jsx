@@ -21,7 +21,7 @@ const Footer = () => {
 				resolvedTheme === 'dark'
 					? 'bg-black-100 text-white'
 					: 'bg-gray-100 text-black-100'
-			}  py-8"`}>
+			}  py-8 font-[roboto]"`}>
 			<div className="container mx-auto h-[15rem] flex flex-col md:flex-row justify-between items-center gap-6 px-4">
 				{/* Logo */}
 				<div className="flex flex-col items-center md:items-start">
@@ -46,12 +46,12 @@ const Footer = () => {
 				</div>
 
 				{/* Navbar Links */}
-				<nav className="flex flex-wrap justify-center gap-6 text-xl font-lora font-black">
+				<nav className="flex flex-wrap justify-center gap-6 text-xl text-black-200 font-black">
 					{links.map(link => (
 						<button
 							key={link.name}
 							onClick={() => handleScroll(link.route.substring(1))}
-							className="hover:text-tertiary transition-colors duration-300">
+							className="hover:text-tertiary hover:bg-gray-200 hover:py-1 hover:px-3 transition-all duration-300">
 							{link.name}
 						</button>
 					))}

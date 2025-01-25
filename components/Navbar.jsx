@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes'
 import { Menu as MenuIcon, Moon, X as XIcon, Sun } from 'lucide-react'
 import { useGlobalProvider } from '../constants/GlobalContext'
 import { links } from '@/constants'
-import { PulsatingButton } from './ui/pulsating-button'
+
 
 import Modal from './Modal'
 import MobileNav from '../components/MobileNav'
@@ -35,10 +35,10 @@ const Navbar = () => {
 			{/* Navbar container */}
 			<div
 				className={clsx(
-					'fixed top-0 left-0 w-full py-3 px-5 font-lora shadow-xl z-50 transition-all duration-300',
+					'fixed top-0 left-0 w-full py-3 px-5 font-lora shadow-sm z-50 transition-all duration-300',
 					{
-						'bg-black-100 text-white-100': theme === 'dark', // Dark theme colors
-						'bg-white text-black-100': theme === 'light', // Light theme colors
+						'bg-black-100': theme === 'dark', // Dark theme colors
+						'bg-white': theme === 'light', // Light theme colors
 					}
 				)}>
 				<nav className="flex justify-between items-center px-6">
@@ -51,7 +51,7 @@ const Navbar = () => {
 						) : (
 							<Image src="/logo.png" alt="logo" width={40} height={30} />
 						)}
-						<span className="font-black text-3xl hidden sm:block">
+						<span className="font-black font-[roboto] text-2xl hidden sm:block">
 							Molamike Devs
 						</span>
 					</button>
@@ -69,7 +69,7 @@ const Navbar = () => {
 					</button>
 
 					{/* Desktop Navigation Links */}
-					<div className="hidden lg:flex items-center gap-6 text-xl font-lora font-medium">
+					<div className="hidden lg:flex items-center gap-6 text-xl font-[roboto] font-medium">
 						{links.map((link, index) => (
 							<button
 								key={index}
@@ -86,36 +86,24 @@ const Navbar = () => {
 								)}
 							</button>
 						))}
+					</div>
 
-						{/* Dark Mode Toggle */}
+					{/* Dark Mode Toggle */}
+					<div
+						className="relative w-14 h-7 bg-black-200 border border-gray-300 hover:border-tertiary rounded-full p-1 cursor-pointer flex items-center"
+						onClick={handleThemeToggle}>
 						<div
-							className="relative w-20 h-7 bg-black-200 border border-black-200 hover:border-tertiary rounded-full p-1 cursor-pointer flex items-center"
-							onClick={handleThemeToggle}>
-							<div
-								className={`absolute w-7 h-7 rounded-full flex items-center justify-center shadow-md transition-transform duration-300 ease-in-out ${
-									theme === 'dark'
-										? 'transform translate-x-10 bg-tertiary'
-										: 'transform translate-x-0 bg-white'
-								}`}>
-								{theme === 'dark' ? (
-									<Moon size={16} className="text-black-100" />
-								) : (
-									<Sun size={16} className="text-[#EFB036]" />
-								)}
-							</div>
-						</div>
-
-						{/* Contact Me Button */}
-
-						<PulsatingButton
-							className={`py-2 px-6 uppercase rounded-sm hover:translate-x-1 transition-all text-lg font-semibold leading-tight tracking-wider cursor-pointer ${
+							className={`absolute w-6 h-6 rounded-full flex items-center justify-center shadow-md transition-transform duration-300 ease-in-out ${
 								theme === 'dark'
-									? ' bg-black-100 text-white-100 hover:bg-black-100'
-									: 'bg-tertiary text-white'
-							}`}
-							onClick={toggleModal}>
-							Contact Me
-						</PulsatingButton>
+									? 'transform translate-x-6 bg-tertiary'
+									: 'transform translate-0 bg-white'
+							}`}>
+							{theme === 'dark' ? (
+								<Moon size={16} className="text-black-100" />
+							) : (
+								<Sun size={16} className="text-[#EFB036]" />
+							)}
+						</div>
 					</div>
 				</nav>
 

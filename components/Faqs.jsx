@@ -19,12 +19,12 @@ const Faqs = () => {
 				theme === 'dark'
 					? 'bg-black-100 text-white-100'
 					: 'bg-white text-black-100'
-			} py-16 px-12`}>
+			} font-[roboto] py-16 px-12`}>
 			<h2
-				className={`text-center text-xl mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg ${
+				className={`text-center font-[roboto] mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ${
 					theme === 'dark' ? 'text-white' : 'text-black'
 				}`}>
-				Frequently Asked Questions
+				Frequently Ask Questions
 			</h2>
 			<div className="flex flex-col md:flex-row gap-8">
 				{/* Left Column */}
@@ -32,7 +32,7 @@ const Faqs = () => {
 					{faqItems.slice(0, 5).map((item, index) => (
 						<div
 							key={index}
-							className={`border border-gray-600 rounded-lg overflow-hidden ${
+							className={`border border-gray-400 rounded-lg overflow-hidden ${
 								activeIndex === index ? 'bg-black-300' : 'bg-black-100'
 							} ${theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'}`}>
 							<button
@@ -41,12 +41,12 @@ const Faqs = () => {
 									activeIndex === index ? 'text-tertiary' : 'text-white-100'
 								}`}>
 								<span
-									className={`font-black font-lora text-lg ${
+									className={`font-black text-lg ${
 										activeIndex === index
 											? 'text-tertiary' // Active index color
 											: theme === 'dark'
 											? 'text-white-100' // Default dark mode color
-											: 'text-black-100' // Default light mode color
+											: 'text-black-200' // Default light mode color
 									}`}>
 									{item.question}
 								</span>
@@ -68,7 +68,7 @@ const Faqs = () => {
 								<div
 									className={`${
 										theme === 'dark' ? 'text-white-100' : 'text-black-100'
-									} px-4 py-2  font-lora text-sm`}>
+									} px-4 py-2k text-sm`}>
 									{item.answer}
 								</div>
 							)}
@@ -87,7 +87,7 @@ const Faqs = () => {
 					{faqItems.slice(5).map((item, index) => (
 						<div
 							key={index + 5}
-							className={`border border-gray-600 rounded-lg overflow-hidden ${
+							className={`border border-gray-400 rounded-lg overflow-hidden ${
 								activeIndex === index + 5 ? 'bg-black-300' : 'bg-black-100'
 							} ${theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'}`}>
 							<button
@@ -96,12 +96,12 @@ const Faqs = () => {
 									activeIndex === index + 5 ? 'text-tertiary' : 'text-white'
 								}`}>
 								<span
-									className={`font-black font-lora text-lg ${
+									className={`font-black text-lg font-[roboto] ${
 										activeIndex === index + 5
 											? 'text-tertiary' // Active index color
 											: theme === 'dark'
 											? 'text-white-100' // Default dark mode color
-											: 'text-black-100' // Default light mode color
+											: 'text-black-200' // Default light mode color
 									}`}>
 									{item.question}
 								</span>
@@ -123,7 +123,7 @@ const Faqs = () => {
 								<div
 									className={`${
 										theme === 'dark' ? 'text-white-100' : 'text-black-100'
-									} px-4 py-2  font-lora text-sm`}>
+									} px-4 py-2k text-sm font-[roboto]`}>
 									{item.answer}
 								</div>
 							)}

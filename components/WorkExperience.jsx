@@ -12,7 +12,7 @@ const WorkExperience = () => {
 				theme === 'dark' ? 'bg-black-100' : 'bg-white'
 			}  px-8 py-12`}>
 			<h2
-				className={`text-center text-xl mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg ${
+				className={`text-center mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ${
 					theme === 'dark' ? 'text-white' : 'text-black'
 				}`}>
 				My WorkExperience
@@ -29,7 +29,7 @@ const WorkExperience = () => {
 						} w-full min-h-[10rem] md:w-full md:h-[12rem] text-center flex flex-col items-center py-4 px-4 rounded-md shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer`}>
 						<h3
 							className={`${
-								theme === 'dark' ? 'text-white-200' : 'text-black-100'
+								theme === 'dark' ? 'text-white-200' : 'text-black-200'
 							} uppercase font-bold text-lg md:text-xl pb-1`}>
 							{workExp.company}
 						</h3>
@@ -42,7 +42,7 @@ const WorkExperience = () => {
 						<p
 							className={`${
 								theme === 'dark' ? 'text-white-200' : 'text-black-200'
-							} font-xs font-normal font-lora mt-3`}>
+							} font-xs font-normal font-[roboto] mt-3`}>
 							{workExp.dsc}
 						</p>
 					</div>

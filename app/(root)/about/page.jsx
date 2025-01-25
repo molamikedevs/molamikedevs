@@ -5,9 +5,12 @@ import { Download } from 'lucide-react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes' // Use next-themes for theme state
 import { boxContent } from '@/constants'
+import { PulsatingButton } from '../../../components/ui/pulsating-button'
+import { useGlobalProvider } from '@/constants/GlobalContext'
 
 const About = () => {
 	const { theme } = useTheme() // Use resolvedTheme for SSR consistency
+	const { toggleModal } = useGlobalProvider()
 
 	const handleDownload = () => {
 		const link = document.createElement('a')
@@ -20,16 +23,14 @@ const About = () => {
 		<section
 			id="about"
 			className={`relative pt-16 md:pt-20 pb-8 md:pb-12 min-h-screen items-center justify-center px-8 py-12 ${
-				theme === 'dark'
-					? 'bg-black-100 text-white-100'
-					: 'bg-white text-black-100'
+				theme === 'dark' ? 'bg-black-100' : 'bg-white'
 			} flex flex-col-reverse lg:flex-row gap-6 md:gap-12`}>
 			{/* Left Section */}
 			<div className="w-full lg:w-1/2 px-4 sm:px-8 lg:px-12 text-center lg:text-left flex flex-col items-center lg:items-start">
-				<h2 className="text-3xl sm:text-4xl font-black uppercase font-lora">
+				<h2 className="text-3xl sm:text-4xl font-black uppercase font-[roboto]">
 					About Me
 				</h2>
-				<p className={'mt-4 text-base sm:text-md font-lora max-w-prose'}>
+				<p className={`mt-4 text-base sm:text-md font-[roboto] max-w-prose`}>
 					I&apos;m a junior full-stack developer based in Baku, Azerbaijan, with
 					a passion for building immersive and visually appealing web
 					applications. I focus on writing clean, efficient code and creating
@@ -39,18 +40,19 @@ const About = () => {
 					Beyond coding, I enjoy staying updated with the latest tech trends and
 					continuously expanding my skill set.
 				</p>
-				<button
-					onClick={handleDownload}
-					className={`flex items-center justify-center gap-2 mt-6 h-[3rem] w-[12rem] uppercase rounded-sm hover:translate-x-1  transition-all duration-300 text-base sm:text-sm font-lora font-semibold leading-tight tracking-wider ${
+				{/* Contact Me Button */}
+				<PulsatingButton
+					className={`py-3 px-4 mt-8 font-[roboto] uppercase rounded-sm hover:translate-x-1 transition-all text-md font-semibold cursor-pointer ${
 						theme === 'dark'
-							? 'bg-black-300 text-white-100'
-							: 'bg-tertiary hover:bg-tertiary text-white'
-					}`}>
-					<Download size={18} /> Download CV
-				</button>
+							? ' bg-black-300 text-white-100 hover:bg-black-100'
+							: 'bg-tertiary text-white'
+					}`}
+					onClick={toggleModal}>
+					Contact Me
+				</PulsatingButton>
 
 				<div
-					className={`w-full lg:w-[80%] h-auto  mt-8 sm:mt-6 mb-8 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-4 px-4 sm:gap-6 md:gap-8 rounded-sm shadow-lg py-4 sm:py-6 hover:scale-105 transition-all duration-300 cursor-pointer font-lora ${
+					className={`w-full lg:w-[80%] h-auto  mt-8 sm:mt-6 mb-8 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-4 px-4 sm:gap-6 md:gap-8 rounded-sm shadow-lg py-4 sm:py-6 hover:scale-105 transition-all duration-300 cursor-pointer ${
 						theme === 'dark' ? 'bg-black-300' : 'bg-gray-100'
 					}`}>
 					{boxContent.map((content, index) => (
