@@ -72,7 +72,7 @@ const Projects = () => {
 							<div className="p-6">
 								<h3
 									className={`text-xl font-black mb-2 group-hover:text-tertiary ${
-										resolvedTheme === 'dark' ? 'text-white' : 'text-black'
+										resolvedTheme === 'dark' ? 'text-white' : 'text-black-200'
 									}`}>
 									{project.name}
 								</h3>

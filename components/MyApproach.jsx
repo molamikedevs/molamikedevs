@@ -32,14 +32,14 @@ const MyApproach = () => {
 						{/* Default text */}
 						<span
 							className={`${
-								theme === 'dark' ? 'text-white-200' : 'text-black-100'
+								theme === 'dark' ? 'text-white-200' : 'text-black-200'
 							}  text-2xl lg:text-lg font-black group-hover:hidden`}>
 							Phase {index + 1}
 						</span>
 
 						{/* Hover content */}
 						<div className="hidden group-hover:flex flex-col items-center">
-							<h2 className="text-white font-black pb-4 text-2xl md:text-3xl lg:text-2xl ont-[roboto] group-hover:text-tertiary">
+							<h2 className="text-white font-medium pb-4 text-2xl md:text-3xl lg:text-2xl ont-[roboto] group-hover:text-tertiary">
 								{approach.title}
 							</h2>
 							<p

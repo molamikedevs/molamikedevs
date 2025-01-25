@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Download } from 'lucide-react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes' // Use next-themes for theme state
 import { boxContent } from '@/constants'
@@ -59,7 +58,10 @@ const About = () => {
 						<div
 							key={index}
 							className="flex flex-col justify-center items-center gap-1 sm:gap-2">
-							<h1 className="font-black text-base sm:text-md md:text-2xl">
+							<h1
+								className={`${
+									theme === 'dark' ? 'text-white' : 'text-black-200'
+								} font-black text-base sm:text-md md:text-2xl`}>
 								{content.title}
 							</h1>
 							<p className="text-xs sm:text-xs md:text-base font-medium">
