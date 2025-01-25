@@ -12,10 +12,10 @@ const WorkExperience = () => {
 				theme === 'dark' ? 'bg-black-100' : 'bg-white'
 			}  px-8 py-12`}>
 			<h2
-				className={`text-center text-3xl mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg ${
+				className={`text-center text-xl mb-8 uppercase px-6 py-3 font-lora font-extrabold sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] my-5 rounded-lg ${
 					theme === 'dark' ? 'text-white' : 'text-black'
 				}`}>
-				My Work <span className=" text-tertiary">Experience</span>
+				My WorkExperience
 			</h2>
 			<div
 				className={`${

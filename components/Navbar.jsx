@@ -51,7 +51,7 @@ const Navbar = () => {
 						) : (
 							<Image src="/logo.png" alt="logo" width={40} height={30} />
 						)}
-						<span className="text-tertiary font-black text-3xl hidden sm:block">
+						<span className="font-black text-3xl hidden sm:block">
 							Molamike Devs
 						</span>
 					</button>
