@@ -46,12 +46,12 @@ const Footer = () => {
 				</div>
 
 				{/* Navbar Links */}
-				<nav className="flex flex-wrap justify-center gap-6 text-xl text-black-200 font-black">
+				<nav className="flex flex-wrap justify-center gap-6 text-xl text-black-200 font-bold">
 					{links.map(link => (
 						<button
 							key={link.name}
 							onClick={() => handleScroll(link.route.substring(1))}
-							className="hover:text-tertiary hover:bg-gray-200 hover:py-1 hover:px-3 transition-all duration-300">
+							className="hover:text-tertiary hover:bg-gray-200 hover:py-1 hover:px-3 transition-all duration-500">
 							{link.name}
 						</button>
 					))}

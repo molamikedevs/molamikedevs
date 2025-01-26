@@ -35,23 +35,23 @@ const Navbar = () => {
 			{/* Navbar container */}
 			<div
 				className={clsx(
-					'fixed top-0 left-0 w-full py-3 px-5 font-lora shadow-sm z-50 transition-all duration-300',
+					'fixed top-0 font-[roboto] left-0 w-full py-3 px-8 shadow-sm z-50 transition-all duration-300',
 					{
 						'bg-black-100': theme === 'dark', // Dark theme colors
 						'bg-white': theme === 'light', // Light theme colors
 					}
 				)}>
-				<nav className="flex justify-between items-center px-6">
+				<nav className="flex justify-between items-center">
 					{/* Logo Section */}
 					<button
 						onClick={() => handleNavClick('home', '/')}
 						className="flex gap-3 items-center text-2xl cursor-pointer">
 						{theme === 'dark' ? (
-							<Image src="/b-logo.png" alt="logo" width={40} height={30} />
+							<Image src="/b-logo.png" alt="logo" width={30} height={30} />
 						) : (
-							<Image src="/logo.png" alt="logo" width={40} height={30} />
+							<Image src="/logo.png" alt="logo" width={30} height={30} />
 						)}
-						<span className="font-black font-[roboto] text-2xl hidden sm:block">
+						<span className="font-black text-2xl hidden sm:block">
 							Molamike Devs
 						</span>
 					</button>
@@ -69,7 +69,7 @@ const Navbar = () => {
 					</button>
 
 					{/* Desktop Navigation Links */}
-					<div className="hidden lg:flex items-center gap-6 text-xl font-[roboto] font-medium">
+					<div className="hidden lg:flex items-center gap-6 text-xl font-medium">
 						{links.map((link, index) => (
 							<button
 								key={index}
@@ -77,7 +77,7 @@ const Navbar = () => {
 									handleNavClick(link.name.toLowerCase(), link.route)
 								}
 								className={clsx(
-									'relative text-left',
+									'relative text-left hover:text-tertiary transition-colors duration-500',
 									activeSection === link.name.toLowerCase() && 'text-tertiary'
 								)}>
 								{link.name}

@@ -15,7 +15,7 @@ const MyApproach = () => {
 					: 'bg-white text-black-100'
 			} py-16 px-12 `}>
 			<h2
-				className={`text-center mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ont-[roboto] ${
+				className={`text-center mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg font-[roboto] ${
 					theme === 'dark' ? 'text-white' : 'text-black'
 				}`}>
 				My Approach
@@ -27,7 +27,7 @@ const MyApproach = () => {
 						className={`${
 							theme === 'dark'
 								? 'bg-black-300'
-								: 'bg-gray-100 border border-white-100'
+								: 'bg-gray-100 border border-gray-300'
 						} group w-full h-[20rem] text-white-100 flex flex-col justify-center items-center rounded-xl shadow-md px-6 cursor-pointer hover:scale-105 transition-all duration-300 lg:w-[34%]`}>
 						{/* Default text */}
 						<span

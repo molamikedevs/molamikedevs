@@ -19,9 +19,9 @@ const Faqs = () => {
 				theme === 'dark'
 					? 'bg-black-100 text-white-100'
 					: 'bg-white text-black-100'
-			} font-[roboto] py-16 px-12`}>
+			} py-16 px-12 font-[roboto]`}>
 			<h2
-				className={`text-center font-[roboto] mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ${
+				className={`text-center mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ${
 					theme === 'dark' ? 'text-white' : 'text-black'
 				}`}>
 				Frequently Ask Questions
@@ -32,7 +32,7 @@ const Faqs = () => {
 					{faqItems.slice(0, 5).map((item, index) => (
 						<div
 							key={index}
-							className={`border border-gray-400 rounded-lg overflow-hidden ${
+							className={`border border-gray-300 rounded-lg overflow-hidden ${
 								activeIndex === index ? 'bg-black-300' : 'bg-black-100'
 							} ${theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'}`}>
 							<button
@@ -53,13 +53,13 @@ const Faqs = () => {
 								{activeIndex === index ? (
 									<Minus
 										className={`${
-											theme === 'dark' ? 'text-white-100' : 'text-black-100'
+											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
 									/>
 								) : (
 									<Plus
 										className={`${
-											theme === 'dark' ? 'text-white-100' : 'text-black-100'
+											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
 									/>
 								)}
@@ -87,7 +87,7 @@ const Faqs = () => {
 					{faqItems.slice(5).map((item, index) => (
 						<div
 							key={index + 5}
-							className={`border border-gray-400 rounded-lg overflow-hidden ${
+							className={`border border-gray-300 rounded-lg overflow-hidden ${
 								activeIndex === index + 5 ? 'bg-black-300' : 'bg-black-100'
 							} ${theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'}`}>
 							<button
@@ -96,7 +96,7 @@ const Faqs = () => {
 									activeIndex === index + 5 ? 'text-tertiary' : 'text-white'
 								}`}>
 								<span
-									className={`font-black text-lg font-[roboto] ${
+									className={`font-black text-lg ${
 										activeIndex === index + 5
 											? 'text-tertiary' // Active index color
 											: theme === 'dark'
@@ -108,13 +108,13 @@ const Faqs = () => {
 								{activeIndex === index + 5 ? (
 									<Minus
 										className={`${
-											theme === 'dark' ? 'text-white-100' : 'text-black-100'
+											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
 									/>
 								) : (
 									<Plus
 										className={`${
-											theme === 'dark' ? 'text-white-100' : 'text-black-100'
+											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
 									/>
 								)}
@@ -123,7 +123,7 @@ const Faqs = () => {
 								<div
 									className={`${
 										theme === 'dark' ? 'text-white-100' : 'text-black-100'
-									} px-4 py-2k text-sm font-[roboto]`}>
+									} px-4 py-2k text-sm`}>
 									{item.answer}
 								</div>
 							)}

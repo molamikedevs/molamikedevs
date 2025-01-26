@@ -23,7 +23,7 @@ const Projects = () => {
 				resolvedTheme === 'dark'
 					? 'bg-black-100 text-white-100'
 					: 'bg-white text-black-100'
-			} py-16 px-12`}>
+			} py-16 px-12 font-[roboto]`}>
 			{/* Centered Heading */}
 			<h2
 				className={`text-center mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ${
@@ -58,7 +58,7 @@ const Projects = () => {
 						className={`group max-w-md border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ${
 							resolvedTheme === 'dark'
 								? 'bg-black-200 border-black-200'
-								: 'bg-gray-100 border-white-200'
+								: 'bg-gray-100 border-gray-300'
 						}`}>
 						<Link href={project.url}>
 							<div className="relative w-full h-48">

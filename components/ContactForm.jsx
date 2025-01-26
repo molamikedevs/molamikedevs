@@ -3,8 +3,10 @@ import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import { z } from 'zod'
+import { useTheme } from 'next-themes'
 
 const ContactForm = () => {
+	const { theme } = useTheme()
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
@@ -72,12 +74,14 @@ const ContactForm = () => {
 
 	return (
 		<>
-			<h2 className="text-2xl text-white-100 font-bold mb-4">Contact Me</h2>
-			<form className="flex flex-col w-full max-w-md" onSubmit={handleSubmit}>
+			<h2 className="text-2xl font-bold mb-4 text-black-200">Contact Me</h2>
+			<form
+				className={`${
+					theme === 'dark' ? 'text-white-100' : 'text-black-200'
+				} flex flex-col w-full max-w-md `}
+				onSubmit={handleSubmit}>
 				<div className="mb-4">
-					<label
-						htmlFor="name"
-						className="block text-md font-black text-white-100">
+					<label htmlFor="name" className="block text-md font-black">
 						Name
 					</label>
 					<input
@@ -92,9 +96,7 @@ const ContactForm = () => {
 					{errors.message && <p className="text-red-500">{errors.name}</p>}
 				</div>
 				<div className="mb-4">
-					<label
-						htmlFor="email"
-						className="block text-md font-black text-white-100">
+					<label htmlFor="email" className="block text-md font-black">
 						Email
 					</label>
 					<input
@@ -109,9 +111,7 @@ const ContactForm = () => {
 					{errors.message && <p className="text-red-500">{errors.email}</p>}
 				</div>
 				<div className="mb-4">
-					<label
-						htmlFor="phone"
-						className="block text-md font-black text-white-100">
+					<label htmlFor="phone" className="block text-md font-black">
 						Phone
 					</label>
 					<input
@@ -126,9 +126,7 @@ const ContactForm = () => {
 					{errors.message && <p className="text-red-500">{errors.phone}</p>}
 				</div>
 				<div className="mb-4">
-					<label
-						htmlFor="message"
-						className="block text-md font-black text-white-100">
+					<label htmlFor="message" className="block text-md font-black">
 						Message
 					</label>
 					<textarea
@@ -144,7 +142,9 @@ const ContactForm = () => {
 				<div className="flex justify-end gap-4">
 					<button
 						type="button"
-						className="py-2 px-4 bg-black-300 border border-black-200 text-white rounded-md"
+						className={`${
+							theme === 'dark' ? 'text-white-100' : 'text-tertiary'
+						} py-2 px-4 bg-black-300 border border-black-200 rounded-md"`}
 						onClick={() =>
 							setFormData({
 								name: '',
