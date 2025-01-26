@@ -40,13 +40,19 @@ const Footer = () => {
 							height={40}
 						/>
 					)}
-					<p className="text-sm mt-2">
+					<p
+						className={`${
+							resolvedTheme === 'dark' ? 'text-black-300' : 'text-black-200'
+						} text-sm mt-2`}>
 						© {new Date().getFullYear()} Molamike Devs. All rights reserved.
 					</p>
 				</div>
 
 				{/* Navbar Links */}
-				<nav className="flex flex-wrap justify-center gap-6 text-xl text-black-200 font-bold">
+				<nav
+					className={`${
+						resolvedTheme === 'dark' ? 'text-black-300' : 'text-black-200'
+					} flex flex-wrap justify-center gap-6 text-xl  font-bold`}>
 					{links.map(link => (
 						<button
 							key={link.name}

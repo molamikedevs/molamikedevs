@@ -33,7 +33,7 @@ const Faqs = () => {
 						<div
 							key={index}
 							className={`border border-gray-300 rounded-lg overflow-hidden ${
-								activeIndex === index ? 'bg-black-300' : 'bg-black-100'
+								activeIndex === index ? 'bg-black-100' : 'bg-black-100'
 							} ${theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'}`}>
 							<button
 								onClick={() => toggleAccordion(index)}
@@ -43,7 +43,7 @@ const Faqs = () => {
 								<span
 									className={`font-black text-lg ${
 										activeIndex === index
-											? 'text-tertiary' // Active index color
+											? 'text-tertiary transform transition-colors duration-300' // Active index color
 											: theme === 'dark'
 											? 'text-white-100' // Default dark mode color
 											: 'text-black-200' // Default light mode color
@@ -88,7 +88,7 @@ const Faqs = () => {
 						<div
 							key={index + 5}
 							className={`border border-gray-300 rounded-lg overflow-hidden ${
-								activeIndex === index + 5 ? 'bg-black-300' : 'bg-black-100'
+								activeIndex === index + 5 ? 'bg-black-100' : 'bg-black-100'
 							} ${theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'}`}>
 							<button
 								onClick={() => toggleAccordion(index + 5)}
@@ -98,7 +98,7 @@ const Faqs = () => {
 								<span
 									className={`font-black text-lg ${
 										activeIndex === index + 5
-											? 'text-tertiary' // Active index color
+											? 'text-tertiary transform transition-colors duration-300' // Active index color
 											: theme === 'dark'
 											? 'text-white-100' // Default dark mode color
 											: 'text-black-200' // Default light mode color

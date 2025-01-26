@@ -99,7 +99,7 @@ const Navbar = () => {
 									: 'transform translate-0 bg-white'
 							}`}>
 							{theme === 'dark' ? (
-								<Moon size={16} className="text-black-100" />
+								<Moon size={16} className="text-white" />
 							) : (
 								<Sun size={16} className="text-[#EFB036]" />
 							)}

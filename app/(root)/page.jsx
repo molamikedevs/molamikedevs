@@ -25,7 +25,7 @@ const Home = () => {
 					transition={{ duration: 1 }}>
 					Bringing Ideas to Life through Seamless{' '}
 					<motion.span
-						className="text-[#80C4E9]"
+						className="text-tertiary"
 						initial={{ scale: 1, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
 						transition={{ duration: 1.8, delay: 0.8 }}>

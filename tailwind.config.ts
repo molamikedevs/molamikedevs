@@ -25,7 +25,8 @@ export default {
 					DEFAULT: '#FFF',
 				},
 				tertiary: {
-					DEFAULT: '#80C4E9',
+					DEFAULT: '#012bf9',
+					'100': '#30C4E1',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
