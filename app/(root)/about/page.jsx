@@ -55,7 +55,7 @@ const About = () => {
 							<h1
 								className={`${
 									theme === 'dark' ? 'text-white' : 'text-black-200'
-								} font-black text-base sm:text-md md:text-2xl`}>
+								} font-black text-base md:text-xl lg:text-xl`}>
 								{content.title}
 							</h1>
 							<p className="text-xs sm:text-xs md:text-base font-medium">

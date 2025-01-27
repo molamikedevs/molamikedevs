@@ -74,14 +74,14 @@ const ContactForm = () => {
 
 	return (
 		<>
-			<h2 className="text-2xl font-bold mb-4 text-black-200">Contact Me</h2>
 			<form
 				className={`${
 					theme === 'dark' ? 'text-white-100' : 'text-black-200'
-				} flex flex-col w-full max-w-md `}
+				} flex flex-col w-full`}
 				onSubmit={handleSubmit}>
+				<h2 className="text-xl font-black mb-4">Contact Us</h2>
 				<div className="mb-4">
-					<label htmlFor="name" className="block text-md font-black">
+					<label htmlFor="name" className="block text-sm font-medium mb-1">
 						Name
 					</label>
 					<input
@@ -90,13 +90,15 @@ const ContactForm = () => {
 						name="name"
 						value={formData.name}
 						onChange={handleChange}
-						className="w-full border border-black-300 rounded-md px-3 py-2"
+						className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
 						placeholder="Your Name"
 					/>
-					{errors.message && <p className="text-red-500">{errors.name}</p>}
+					{errors.name && (
+						<p className="text-red-500 text-xs mt-1">{errors.name}</p>
+					)}
 				</div>
 				<div className="mb-4">
-					<label htmlFor="email" className="block text-md font-black">
+					<label htmlFor="email" className="block text-sm font-medium mb-1">
 						Email
 					</label>
 					<input
@@ -105,28 +107,32 @@ const ContactForm = () => {
 						name="email"
 						value={formData.email}
 						onChange={handleChange}
-						className="w-full border border-black-300 rounded-md px-3 py-2"
+						className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
 						placeholder="Your Email"
 					/>
-					{errors.message && <p className="text-red-500">{errors.email}</p>}
+					{errors.email && (
+						<p className="text-red-500 text-xs mt-1">{errors.email}</p>
+					)}
 				</div>
 				<div className="mb-4">
-					<label htmlFor="phone" className="block text-md font-black">
+					<label htmlFor="phone" className="block text-sm font-medium mb-1">
 						Phone
 					</label>
 					<input
-						type="phone"
+						type="tel"
 						id="phone"
 						name="phone"
 						value={formData.phone}
 						onChange={handleChange}
-						className="w-full border border-black-300 rounded-md px-3 py-2"
-						placeholder="Your phone number"
+						className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+						placeholder="Your Phone Number"
 					/>
-					{errors.message && <p className="text-red-500">{errors.phone}</p>}
+					{errors.phone && (
+						<p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+					)}
 				</div>
 				<div className="mb-4">
-					<label htmlFor="message" className="block text-md font-black">
+					<label htmlFor="message" className="block text-sm font-medium mb-1">
 						Message
 					</label>
 					<textarea
@@ -135,16 +141,20 @@ const ContactForm = () => {
 						value={formData.message}
 						onChange={handleChange}
 						rows={4}
-						className="w-full border border-black-300 rounded-md px-3 py-2 resize-none"
+						className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:outline-none"
 						placeholder="Your Message"></textarea>
-					{errors.message && <p className="text-red-500">{errors.message}</p>}
+					{errors.message && (
+						<p className="text-red-500 text-xs mt-1">{errors.message}</p>
+					)}
 				</div>
-				<div className="flex justify-end gap-4">
+				<div className="flex justify-end gap-3">
 					<button
 						type="button"
-						className={`${
-							theme === 'dark' ? 'text-white-100' : 'text-tertiary'
-						} py-2 px-4 bg-black-300 border border-black-200 rounded-md"`}
+						className={`py-2 px-4 rounded-md ${
+							theme === 'dark'
+								? 'bg-gray-700 text-white'
+								: 'bg-gray-200 text-black'
+						} hover:bg-gray-300 transition`}
 						onClick={() =>
 							setFormData({
 								name: '',
@@ -157,7 +167,7 @@ const ContactForm = () => {
 					</button>
 					<button
 						type="submit"
-						className="py-2 px-4 bg-[#80C4E9] text-black rounded-md"
+						className="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
 						disabled={loading}>
 						{loading ? 'Sending...' : 'Send'}
 					</button>

@@ -5,10 +5,11 @@ import { useOutsideClick } from '../hooks/useOutsideClick'
 import { useTheme } from 'next-themes'
 
 const Modal = ({ isOpen, onClose, children }) => {
-	const { theme } = useTheme()
+  const { theme } = useTheme()
 	const { ref } = useOutsideClick(() => {
 		if (isOpen) onClose() // Close the modal when clicking outside
 	})
+
 	if (!isOpen) return null
 
 	return (
@@ -16,16 +17,16 @@ const Modal = ({ isOpen, onClose, children }) => {
 			<div
 				ref={ref}
 				className={`${
-					theme === 'dark' ? 'bg-black-100' : 'bg-gray-200'
-				}  border border-white-100 w-[70%] h-[80%] rounded-lg shadow-lg relative flex flex-col items-center justify-center`}>
+					theme === 'dark'
+						? 'bg-black-100 text-white-200 border border-white-200'
+						: 'bg-gray-200 text-black-200'
+				} w-[90%] max-w-xl h-auto rounded-lg shadow-lg relative p-6`}>
 				<button
 					onClick={onClose}
-					className="absolute top-4 right-4 text-white-300 hover:text-black">
-					<X
-						className={`w-8 h-8 ${
-							theme === 'dark' ? 'text-white-200' : 'text-black-200'
-						}`}
-					/>
+					className={`absolute top-4 right-4 ${
+						theme === 'dark' ? 'text-white-200' : 'text-black-200'
+					} hover:opacity-75 transition`}>
+					<X className="w-6 h-6" />
 				</button>
 				{children}
 			</div>
