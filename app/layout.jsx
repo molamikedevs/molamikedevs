@@ -1,27 +1,36 @@
 import './globals.css'
+import 'normalize.css'
 import localFont from 'next/font/local'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { GlobalContextProvider } from '../constants/GlobalContext'
 import { ThemeProvider } from 'next-themes'
 
-
-const lora = localFont({
+const roboto = localFont({
 	src: [
-		{ path: '../public/fonts/Lora-Bold.ttf', weight: '700', style: 'normal' },
 		{
-			path: '../public/fonts/Lora-SemiBold.ttf',
+			path: '../public/fonts/Roboto-Black.ttf',
+			weight: '900',
+			style: 'normal',
+		},
+		{ path: '../public/fonts/Roboto-Bold.ttf', weight: '700', style: 'normal' },
+		{
+			path: '../public/fonts/Roboto-SemiBold.ttf',
 			weight: '600',
 			style: 'normal',
 		},
-		{ path: '../public/fonts/Lora-Medium.ttf', weight: '500', style: 'normal' },
 		{
-			path: '../public/fonts/Lora-Regular.ttf',
+			path: '../public/fonts/Roboto-Medium.ttf',
+			weight: '500',
+			style: 'normal',
+		},
+		{
+			path: '../public/fonts/Roboto-Regular.ttf',
 			weight: '400',
 			style: 'normal',
 		},
 	],
-	variable: '--font-lora',
+	variable: '--font-roboto',
 })
 
 export const metadata = {
@@ -34,7 +43,7 @@ export const metadata = {
 const MainLayout = ({ children }) => {
 	return (
 		<html lang="en">
-			<body className={`${lora.variable} antialiased`}>
+			<body className={`${roboto.variable} antialiased`}>
 				<GlobalContextProvider>
 					<ThemeProvider attribute="class" defaultTheme="dark">
 						<ToastContainer

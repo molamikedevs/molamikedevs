@@ -20,10 +20,11 @@ const About = () => {
 			} flex flex-col-reverse lg:flex-row gap-6 md:gap-12`}>
 			{/* Left Section */}
 			<div className="w-full lg:w-1/2 px-4 sm:px-8 lg:px-12 text-center lg:text-left flex flex-col items-center lg:items-start">
-				<h2 className="text-3xl sm:text-4xl font-black uppercase font-[roboto]">
+				<h2 className="text-3xl sm:text-4xl font-black uppercase font-roboto">
 					About Me
 				</h2>
-				<p className={`mt-4 text-base sm:text-md font-[roboto] max-w-prose`}>
+				<p
+					className={`mt-4 text-base sm:text-md leading-7 font-roboto max-w-prose`}>
 					I&apos;m a junior full-stack developer based in Baku, Azerbaijan, with
 					a passion for building immersive and visually appealing web
 					applications. I focus on writing clean, efficient code and creating
@@ -35,7 +36,7 @@ const About = () => {
 				</p>
 				{/* Contact Me Button */}
 				<PulsatingButton
-					className={`py-3 px-4 mt-8 font-[roboto] uppercase rounded-sm hover:translate-x-1 transition-all text-md font-semibold cursor-pointer ${
+					className={`py-3 px-4 mt-8 font-roboto uppercase rounded-sm hover:translate-x-1 transition-all text-md font-semibold cursor-pointer ${
 						theme === 'dark'
 							? ' bg-black-300 text-white-100 hover:bg-black-100'
 							: 'bg-tertiary text-white'
@@ -45,7 +46,7 @@ const About = () => {
 				</PulsatingButton>
 
 				<div
-					className={`w-full lg:w-[80%] h-auto  mt-8 sm:mt-6 mb-8 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-4 px-4 sm:gap-6 md:gap-8 rounded-sm shadow-lg py-4 sm:py-6 hover:scale-105 transition-all duration-300 cursor-pointer ${
+					className={`w-full lg:w-[80%] h-auto  mt-8 sm:mt-6 mb-8 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-4 px-4 sm:gap-6 md:gap-8 rounded-sm shadow-inner py-4 sm:py-6 hover:scale-105 transition-all duration-300 cursor-pointer ${
 						theme === 'dark' ? 'bg-black-300' : 'bg-gray-100'
 					}`}>
 					{boxContent.map((content, index) => (
@@ -55,12 +56,10 @@ const About = () => {
 							<h1
 								className={`${
 									theme === 'dark' ? 'text-white' : 'text-black-200'
-								} font-black `}>
+								} font-black text-base`}>
 								{content.title}
 							</h1>
-							<p className="text-xs sm:text-xs md:text-base font-medium">
-								{content.subText}
-							</p>
+							<p className="text-xs sm:text-sm">{content.subText}</p>
 						</div>
 					))}
 				</div>

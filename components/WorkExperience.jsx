@@ -10,7 +10,7 @@ const WorkExperience = () => {
 		<WarpBackground
 			className={`${
 				theme === 'dark' ? 'bg-black-100' : 'bg-white'
-			}  px-8 py-12 font-[roboto]`}>
+			}  px-8 py-12 font-roboto`}>
 			<h2
 				className={`text-center mb-8 uppercase px-6 py-3 font-extrabold sm:text-[2.5rem] text-[1rem] my-5 rounded-lg ${
 					theme === 'dark' ? 'text-white' : 'text-black'

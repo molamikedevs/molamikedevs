@@ -35,7 +35,7 @@ const Navbar = () => {
 			{/* Navbar container */}
 			<div
 				className={clsx(
-					'fixed top-0 font-[roboto] left-0 w-full py-3 px-8 shadow-sm z-50 transition-all duration-300',
+					'fixed top-0 font-roboto left-0 w-full py-3 px-8 shadow-sm z-50 transition-all duration-300',
 					{
 						'bg-black-100': theme === 'dark', // Dark theme colors
 						'bg-white': theme === 'light', // Light theme colors
@@ -69,7 +69,7 @@ const Navbar = () => {
 					</button>
 
 					{/* Desktop Navigation Links */}
-					<div className="hidden lg:flex items-center gap-6 text-xl font-medium">
+					<div className="hidden lg:flex items-center gap-6 text-md font-medium">
 						{links.map((link, index) => (
 							<button
 								key={index}

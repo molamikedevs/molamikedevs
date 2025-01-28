@@ -9,7 +9,7 @@ export const links = [
 
 export const boxContent = [
 	{
-		title: '2 years+',
+		title: '2yrs+',
 		subText: 'Experience',
 	},
 	{
@@ -80,10 +80,11 @@ export const projects = [
 		category: 'Full Stack',
 	},
 	{
-		name: 'Nature',
-		photo: '/tour.jpg',
-		url: '/projects/4',
-		subText: 'A beautiful and user-friendly nature-themed eCommerce website.',
+		name: 'Movie App',
+		photo: '/movie.png',
+		url: 'https://movies-app-4bz6.onrender.com/',
+		subText:
+			'This web app displays all latest movies and filter search results and display trending movies based on users search results.',
 		category: 'Frontend',
 	},
 	{

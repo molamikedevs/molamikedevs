@@ -2,10 +2,15 @@
 import React from 'react'
 import clsx from 'clsx'
 import { links } from '@/constants'
+import { useTheme } from 'next-themes'
 
 const MobileNav = ({ onPress, activeRoute }) => {
+	const { theme } = useTheme()
 	return (
-		<div className="lg:hidden mt-4 bg-black-100 p-4 shadow-xl rounded-md">
+		<div
+			className={`${
+				theme === 'dark' ? 'bg-black-100 ' : 'bg-gray-100'
+			} lg:hidden mt-4 p-4 shadow-xl rounded-md`}>
 			<ul className="flex flex-col gap-4 text-lg font-medium">
 				{links.map((link, index) => (
 					<li key={index}>
