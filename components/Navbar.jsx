@@ -7,13 +7,12 @@ import { Menu as MenuIcon, Moon, X as XIcon, Sun } from 'lucide-react'
 import { useGlobalProvider } from '../constants/GlobalContext'
 import { links } from '@/constants'
 
-
 import Modal from './Modal'
 import MobileNav from '../components/MobileNav'
 import ContactForm from '../components/ContactForm'
 
 const Navbar = () => {
-	const { theme, setTheme } = useTheme() // Use next-themes hook
+	const { theme, setTheme } = useTheme()
 	const {
 		isModalOpen,
 		toggleModal,
@@ -24,51 +23,47 @@ const Navbar = () => {
 		activeSection,
 	} = useGlobalProvider()
 
-	// Toggle dark/light theme
 	const handleThemeToggle = () => {
 		const newTheme = theme === 'dark' ? 'light' : 'dark'
-		setTheme(newTheme) // Switch theme using next-themes
+		setTheme(newTheme)
 	}
 
 	return (
 		<>
-			{/* Navbar container */}
 			<div
 				className={clsx(
-					'fixed top-0 font-roboto left-0 w-full py-3 px-8 shadow-sm z-50 transition-all duration-300',
-					{
-						'bg-black-100': theme === 'dark', // Dark theme colors
-						'bg-white': theme === 'light', // Light theme colors
-					}
+					'fixed top-0 left-0 w-full py-3 px-8 shadow-sm z-50 transition-all duration-300',
+					theme === 'dark' ? 'bg-black-100' : 'bg-white'
 				)}>
 				<nav className="flex justify-between items-center">
-					{/* Logo Section */}
+					{/* Logo */}
 					<button
 						onClick={() => handleNavClick('home', '/')}
 						className="flex gap-3 items-center text-2xl cursor-pointer">
-						{theme === 'dark' ? (
-							<Image src="/b-logo.png" alt="logo" width={30} height={30} />
-						) : (
-							<Image src="/logo.png" alt="logo" width={30} height={30} />
-						)}
+						<Image
+							src={theme === 'dark' ? '/b-logo.png' : '/logo.png'}
+							alt="logo"
+							width={30}
+							height={30}
+						/>
 						<span className="font-black text-2xl hidden sm:block">
 							Molamike Devs
 						</span>
 					</button>
 
-					{/* Hamburger Icon for Mobile */}
+					{/* Hamburger Icon */}
 					<button
 						className="block lg:hidden"
 						onClick={toggleMobileMenu}
 						aria-label="Toggle Mobile Menu">
 						{isMobileMenuOpen ? (
-							<XIcon className="w-16 h-16" />
+							<XIcon className="w-6 h-6" />
 						) : (
-							<MenuIcon size={48} />
+							<MenuIcon className="w-6 h-6" />
 						)}
 					</button>
 
-					{/* Desktop Navigation Links */}
+					{/* Desktop Links */}
 					<div className="hidden lg:flex items-center gap-6 text-md font-medium">
 						{links.map((link, index) => (
 							<button
@@ -88,7 +83,7 @@ const Navbar = () => {
 						))}
 					</div>
 
-					{/* Dark Mode Toggle */}
+					{/* Theme Toggle */}
 					<div
 						className="relative w-14 h-7 bg-black-200 border border-gray-300 hover:border-tertiary rounded-full p-1 cursor-pointer flex items-center"
 						onClick={handleThemeToggle}>
@@ -107,7 +102,7 @@ const Navbar = () => {
 					</div>
 				</nav>
 
-				{/* Mobile Menu */}
+				{/* Mobile Navigation */}
 				{isMobileMenuOpen && (
 					<MobileNav
 						onPress={(id, route) => handleNavClick(id, route)}

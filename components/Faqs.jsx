@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Plus, Minus } from 'lucide-react' // Import Lucide icons
+import { ChevronDown, ChevronUp } from 'lucide-react' // Import Lucide icons
 import DotPattern from './ui/dot-pattern'
 import { faqItems } from '@/constants'
 import { useTheme } from 'next-themes'
@@ -41,7 +41,7 @@ const Faqs = () => {
 									activeIndex === index ? 'text-tertiary' : 'text-white-100'
 								}`}>
 								<span
-									className={`font-black text-lg ${
+									className={`font-black text-sm sm:text-xl ${
 										activeIndex === index
 											? 'text-tertiary transform transition-colors duration-300' // Active index color
 											: theme === 'dark'
@@ -51,13 +51,13 @@ const Faqs = () => {
 									{item.question}
 								</span>
 								{activeIndex === index ? (
-									<Minus
+									<ChevronUp
 										className={`${
 											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
 									/>
 								) : (
-									<Plus
+									<ChevronDown
 										className={`${
 											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
@@ -96,7 +96,7 @@ const Faqs = () => {
 									activeIndex === index + 5 ? 'text-tertiary' : 'text-white'
 								}`}>
 								<span
-									className={`font-black text-lg ${
+									className={`font-black text-md sm:text-xl ${
 										activeIndex === index + 5
 											? 'text-tertiary transform transition-colors duration-300' // Active index color
 											: theme === 'dark'
@@ -106,13 +106,13 @@ const Faqs = () => {
 									{item.question}
 								</span>
 								{activeIndex === index + 5 ? (
-									<Minus
+									<ChevronUp
 										className={`${
 											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}
 									/>
 								) : (
-									<Plus
+									<ChevronDown
 										className={`${
 											theme === 'dark' ? 'text-white-100' : 'text-black-200'
 										} w-5 h-5`}

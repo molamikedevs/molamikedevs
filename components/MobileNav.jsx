@@ -8,19 +8,19 @@ const MobileNav = ({ onPress, activeRoute }) => {
 	const { theme } = useTheme()
 	return (
 		<div
-			className={`${
-				theme === 'dark' ? 'bg-black-100 ' : 'bg-gray-100'
-			} lg:hidden mt-4 p-4 shadow-xl rounded-md`}>
-			<ul className="flex flex-col gap-4 text-lg font-medium">
+			className={`fixed top-0 left-0 w-full h-full z-40 flex items-center justify-center ${
+				theme === 'dark' ? 'bg-black-100/90' : 'bg-gray-100/90'
+			} backdrop-blur-sm`}>
+			<ul className="flex flex-col items-center gap-6 text-lg font-medium">
 				{links.map((link, index) => (
 					<li key={index}>
 						<button
 							onClick={() => onPress(link.name.toLowerCase(), link.route)}
 							className={clsx(
-								'block py-2 px-4 rounded-md w-full text-left',
+								'block py-2 px-6 rounded-md text-center',
 								activeRoute === link.route
 									? 'bg-tertiary text-white'
-									: 'hover:bg-gray-100'
+									: 'hover:bg-gray-200'
 							)}>
 							{link.name}
 						</button>

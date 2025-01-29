@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import DotPattern from '@/components/ui/dot-pattern'
 import Marquee from '@/components/ui/marquee'
 import Image from 'next/image'
@@ -7,12 +7,7 @@ import { testimonials } from '@/constants'
 import { useTheme } from 'next-themes'
 
 const Testimonial = () => {
-	const [expanded, setExpanded] = useState({}) // Track expanded states for each testimonial
 	const { resolvedTheme } = useTheme()
-
-	const toggleExpand = index => {
-		setExpanded(prev => ({ ...prev, [index]: !prev[index] }))
-	}
 
 	return (
 		<DotPattern
@@ -31,7 +26,7 @@ const Testimonial = () => {
 			<Marquee className="mt-8" speed="25s">
 				{' '}
 				{/* Adjusted speed */}
-				<div className="flex flex-wrap gap-6 justify-center items-center">
+				<div className="flex flex-wrap gap-6 justify-center items-stretch">
 					{testimonials.map((testimonial, index) => (
 						<div
 							key={index}
@@ -39,15 +34,16 @@ const Testimonial = () => {
 								resolvedTheme === 'dark'
 									? 'bg-black-200 text-white-100'
 									: 'bg-gray-100 border border-white-200 text-black-200'
-							}  p-6 rounded-lg shadow-lg max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg`}>
+							} p-6 rounded-lg shadow-lg max-w-md sm:max-w-sm md:max-w-md lg:max-w-lg 
+                                    h-[170px] sm:h-[180px] flex flex-col justify-between overflow-hidden`}>
 							<div className="grid grid-cols-[auto_1fr] gap-4 items-center">
 								{/* Image */}
 								<Image
 									src={testimonial.imgUrl}
 									alt="user"
-									width={70}
-									height={70}
-									className="rounded-full object-cover"
+									width={64}
+									height={64}
+									className="w-16 h-16 rounded-full object-cover"
 								/>
 								{/* User Info */}
 								<div>
@@ -60,23 +56,14 @@ const Testimonial = () => {
 										{testimonial.name}
 									</p>
 									<small className="text-gray-400 font-medium">
-										Position: {testimonial.position}
+										{testimonial.position}
 									</small>
 								</div>
 							</div>
 							{/* Testimonial Text */}
-							<p className="mt-4 leading-relaxed">
-								{expanded[index]
-									? testimonial.subText
-									: `${testimonial.subText.slice(0, 100)}...`}
+							<p className="mt-4 text-sm leading-relaxed line-clamp-3">
+								{testimonial.subText}
 							</p>
-							{testimonial.subText.length > 100 && (
-								<button
-									onClick={() => toggleExpand(index)}
-									className="mt-2 text-tertiary font-medium hover:underline">
-									{expanded[index] ? 'Show Less' : 'Read More'}
-								</button>
-							)}
 						</div>
 					))}
 				</div>

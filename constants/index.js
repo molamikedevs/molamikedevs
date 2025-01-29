@@ -26,33 +26,34 @@ export const testimonials = [
 	{
 		name: 'Alhaji Foday Kamara',
 		position: 'Enterprise Pipeline Officer',
-		imgUrl: '/logo.png',
+		imgUrl: '/paid.jpeg',
 		subText:
-			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
+			'Kevin and his team delivered outstanding results ahead of schedule. Highly recommended for their professionalism!',
 	},
 
 	{
-		name: 'Chernor Bah',
+		name: 'Chernor Bah' || 'Avatar',
 		position: 'Procurement Officer',
-		imgUrl: '/logo.png',
+		imgUrl: '/av-3.jpeg',
 		subText:
-			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
+			'Exceptional service! The team exceeded my expectations with their dedication and efficiency.',
 	},
 	{
 		name: 'Alie Sawray',
 		position: 'IT Assistant',
-		imgUrl: '/logo.png',
+		imgUrl: '/alie.jpg',
 		subText:
-			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
+			'Great experience working with Kevin’s team. They are reliable, skilled, and meet deadlines effortlessly.',
 	},
 	{
-		name: 'Osman Mansaray',
-		position: 'Junior Associate ',
-		imgUrl: '/logo.png',
+		name: 'Ben Johnson',
+		position: 'Junior Associate',
+		imgUrl: '/av-2.jpg',
 		subText:
-			'Kevin and his team are so dedicated to their job, and my experience was a successful one. Completed before the given date, I will more than willingly recommend them to anyone that requires their service.',
+			'Highly professional team! Their attention to detail and commitment made the project a success.',
 	},
 ]
+
 
 export const projects = [
 	{
