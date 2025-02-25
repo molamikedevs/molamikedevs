@@ -4,9 +4,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ---
 
-<p align="center">
-  <img src="https://your-image-url.com/banner.png" width="600">
+ <p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1OXAFIHLSisqnlTttDuZlNfoPYv5wKBB4" width="600">
 </p>
+
 
 <h1 align="center">👋 Hi there, I'm <strong>Lamin Foday</strong></h1>
 
