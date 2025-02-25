@@ -5,18 +5,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-# Hi there 👋
+# 👋 Hi there, I'm **Lamin Foday**  
+
 
 I'm **Lamin Foday** ✨✨
 
-🌟 **Junior Web Stack Developer** | 💻 Coding Enthusiast | 🚀 Tech Innovator  
+## 🌟 **Junior Web Stack Developer** | 💻 **Coding Enthusiast** | 🚀 **Tech Innovator**  
 
-You can reach me through 📩 molamikedevs@gmail.com  
+## You can reach me through 📩 molamikedevs@gmail.com  
 
-- 🎯 I’m currently working on exciting web projects.  
-- 🌱 Always eager to learn and grow.  
-- 🤝 Looking to collaborate on open-source projects.  
-- 🔥 Passionate about clean code and best practices.  
+##🔹 🔥 I'm currently working on exciting web projects.  
+##🔹 🌱 Always eager to learn and grow.  
+## 🔹 🤝 Looking to collaborate on open-source projects.  
+## 🔹 💡 Passionate about clean code and best practices.  
+
 
 ---
 🔗 **Check out my portfolio:** [www.molamikedevs.com](http://www.molamikedevs.com)  
