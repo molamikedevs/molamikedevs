@@ -5,8 +5,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-Hello there!
-I am Lamin Foday, a student and a junior developer. I have experience with React, Next.Js, and React native with some backend tech stack, appwrite, supabase, and mongoDB. I am still learning to improve my skills, and I am open to joining a team to collaborate on projects.
+# Hi there 👋
+
+I'm **Lamin Foday** ✨✨
+
+🌟 **Junior Web Stack Developer** | 💻 Coding Enthusiast | 🚀 Tech Innovator  
+
+You can reach me through 📩 molamikedevs@gmail.com  
+
+- 🎯 I’m currently working on exciting web projects.  
+- 🌱 Always eager to learn and grow.  
+- 🤝 Looking to collaborate on open-source projects.  
+- 🔥 Passionate about clean code and best practices.  
+
+---
+🔗 **Check out my portfolio:** [www.molamikedevs.com](http://www.molamikedevs.com)  
+
 ```
 
 Open www.molamikedevs.com with your browser to see the result.
