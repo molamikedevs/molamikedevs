@@ -1,66 +1,91 @@
-# 🚀 Next.js Project
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
----
-
-
-<h1 align="center">👋 Hi there, I'm <strong>Lamin Foday</strong></h1>
+<h1 align="center">👋 Hi, I'm <strong>Lamin Foday</strong></h1>
 
 <p align="center">
-  🌟 <strong>Junior Web Stack Developer</strong> | 💻 <strong>Coding Enthusiast</strong> | 🚀 <strong>Tech Innovator</strong>
+  🌟 <strong>Full-Stack Developer</strong> | 💻 <strong>Passionate Coder</strong> | 🚀 <strong>Tech Enthusiast</strong>
 </p>
 
 <p align="center">
-  📩 <strong>Contact me:</strong> molamikedevs@gmail.com
+  📫 <strong>Contact me:</strong> <a href="mailto:molamikedevs@gmail.com">molamikedevs@gmail.com</a>
 </p>
 
 ---
 
-## 💡 About Me
+## 💡 About Me  
 
-- 🔥 I'm currently working on exciting web projects.  
-- 🌱 Always eager to learn and grow.  
-- 🤝 Looking to collaborate on open-source projects.  
-- 💡 Passionate about clean code and best practices.  
+I'm a **full-stack developer** based in **Baku, Azerbaijan**, with a passion for building **scalable, high-performance web applications**. I specialize in **JavaScript, React, Next.js, and modern backend technologies**, always striving for **clean, efficient, and maintainable code**.  
 
----
-
-🔗 **Check out my portfolio:** [www.molamikedevs.com](http://www.molamikedevs.com)  
-
-## 🚀 Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [www.molamikedevs.com](http://www.molamikedevs.com) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔹 **Tech Enthusiast:** I love working on **open-source projects** and exploring the latest technologies.  
+🔹 **Problem Solver:** I enjoy tackling complex coding challenges and **optimizing performance**.  
+🔹 **Lifelong Learner:** Constantly improving my skills by building **real-world projects** and keeping up with **tech trends**.  
 
 ---
 
-## 📚 Learn More
+## 🛠 Tech Stack  
 
-To learn more about Next.js, take a look at the following resources:
+### **Frontend**  
+🔹 **JavaScript (ES6+)**, **TypeScript**  
+🔹 **Java**, **Python**  
+🔹 **React.js**, **Next.js**  
+🔹 **Tailwind CSS**, **Framer Motion**  
+ 🔹 **SASS**, **Shadui**  
 
-- 📖 [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
-- 🎓 [Learn Next.js](https://nextjs.org/learn) - An interactive Next.js tutorial.
+### **Backend & Databases**  
+🔹 **Node.js**, **Express.js**  
+🔹 **Django**, **PostgreSQL**, **MongoDB**, **Supabase**  
+🔹 **Appwrite**,   
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Tools & Other**  
+🔹 **Git & GitHub**, **VS Code**, **Eclipse**, **Figma**  
+🔹 **CI/CD**, **Vercel**, **Render**, **Docker**  
+🔹 **Pycharm**, **Photoshop**, **Netlify**, **Postman** 
 
 ---
 
-## 🚀 Deploy on Vercel
+## 🚀 Projects  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🌟 **[Modern Developer Portfolio](https://modernportfoliodevs-molamikedevs-projects.vercel.app/)** – A **visually stunning** portfolio with **3D elements**  
+🌟 **[Movie Trending App](https://movies-app-4bz6.onrender.com)** – Real-time movie trends powered by **Appwrite & TMDB API**  
+🌟 **[E-commerce Platform (Coming Soon)]** – A full-stack **Next.js + Supabase** e-commerce project  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔗 **Explore more projects:** [GitHub Repositories](https://github.com/molamikedevs?tab=repositories)  
+
+---
+
+## 📈 GitHub Stats  
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=molamikedevs&theme=radical&hide_border=true" alt="GitHub Streak" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api?username=molamikedevs&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+</p>
+
+---
+
+## 🤝 Let's Connect  
+
+<table>
+  <tr>
+    <td>🔗 <strong>Portfolio:</strong></td>
+    <td><a href="http://www.molamikedevs.com">www.molamikedevs.com</a></td>
+  </tr>
+  <tr>
+    <td>🔗 <strong>LinkedIn:</strong></td>
+    <td><a href="https://www.linkedin.com/in/lamin-foday-23a263344/">linkedin.com/in/lamin-foday</a></td>
+  </tr>
+  <tr>
+    <td>🔗 <strong>Twitter (X):</strong></td>
+    <td><a href="https://x.com/molamikdevs">twitter.com/molamikdevs</a></td>
+  </tr>
+  <tr>
+    <td>🔗 <strong>Facebook:</strong></td>
+    <td><a href="https://www.facebook.com/profile.php?id=61572706933788">facebook.com/molamikdevs</a></td>
+  </tr>
+</table>
+
+
+
+
+
+---
+
+🚀 **Open to remote work & collaboration!** Feel free to reach out if you're interested in working together. 😊
