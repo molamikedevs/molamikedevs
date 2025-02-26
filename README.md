@@ -45,7 +45,9 @@ I'm a **full-stack developer** based in **Baku, Azerbaijan**, with a passion for
 
 🌟 **[Modern Developer Portfolio](https://modernportfoliodevs-molamikedevs-projects.vercel.app/)** – A **visually stunning** portfolio with **3D elements**  
 🌟 **[Movie Trending App](https://movies-app-4bz6.onrender.com)** – Real-time movie trends powered by **Appwrite & TMDB API**  
-🌟 **[E-commerce Platform (Coming Soon)]** – A full-stack **Next.js + Supabase** e-commerce project  
+🌟 **[Xora Landing Page](https://xora-landding-page.onrender.com/)** – Stunning UI/UX **Landing page**  
+🌟 **[E-commerce Platform (Coming Soon)]** – A full-stack **Next.js + Appwrite** e-commerce project**  
+🌟 **[Booking Reserversation (Coming Soon)]** – A full-stack **Next.js + Supabase**, **Next Auth**
 
 🔗 **Explore more projects:** [GitHub Repositories](https://github.com/molamikedevs?tab=repositories)  
 
