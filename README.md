@@ -22,9 +22,12 @@ I'm a **full-stack developer** based in **Baku, Azerbaijan**, with a passion for
 
 ## 🛠 Tech Stack  
 
+### **Programming Languages**  
+🔹 **JavaScript (ES6+)**, **TypeScript**    
+🔹 **Python**, **Java**  
+
 ### **Frontend**  
-🔹 **JavaScript (ES6+)**, **TypeScript**  
-🔹 **Java**, **Python**  
+🔹 **JavaScript (ES6+)**, **TypeScript**    
 🔹 **React.js**, **Next.js**  
 🔹 **Tailwind CSS**, **Framer Motion**  
  🔹 **SASS**, **Shadui**  
@@ -36,7 +39,7 @@ I'm a **full-stack developer** based in **Baku, Azerbaijan**, with a passion for
 
 ### **Tools & Other**  
 🔹 **Git & GitHub**, **VS Code**, **Eclipse**, **Figma**  
-🔹 **CI/CD**, **Vercel**, **Render**, **Docker**  
+🔹 **Figma**, **Vercel**, **Render**, **Docker**  
 🔹 **Pycharm**, **Photoshop**, **Netlify**, **Postman** 
 
 ---
