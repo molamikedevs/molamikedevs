@@ -18,6 +18,12 @@ export default {
 					'200': 'rgba(17, 25, 40, 0.75)',
 					'300': 'rgba(255, 255, 255, 0.125)',
 					DEFAULT: '#000',
+					primary: '#0077FF',
+					backgroundDark: '#0A0A0A',
+					backgroundLight: '#F8F8F8',
+					textDark: '#FFFFFF',
+					textLight: '#000000',
+					borderColor: '#333333',
 				},
 				white: {
 					'100': '#BEC1DD',
@@ -31,6 +37,8 @@ export default {
 			},
 			fontFamily: {
 				roboto: ['var(--font-roboto)'],
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
 			},
 
 			animation: {

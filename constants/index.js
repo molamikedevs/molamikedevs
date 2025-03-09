@@ -24,19 +24,18 @@ export const boxContent = [
 
 export const testimonials = [
 	{
+		name: 'Judith James',
+		position: 'Procurement Officer',
+		imgUrl: '/av-3.jpeg',
+		subText:
+			'Exceptional service! The team exceeded my expectations with their dedication and efficiency.',
+	},
+	{
 		name: 'Alhaji Foday Kamara',
 		position: 'Enterprise Pipeline Officer',
 		imgUrl: '/paid.jpeg',
 		subText:
 			'Kevin and his team delivered outstanding results ahead of schedule. Highly recommended for their professionalism!',
-	},
-
-	{
-		name: 'Chernor Bah' || 'Avatar',
-		position: 'Procurement Officer',
-		imgUrl: '/av-3.jpeg',
-		subText:
-			'Exceptional service! The team exceeded my expectations with their dedication and efficiency.',
 	},
 	{
 		name: 'Alie Sawray',
@@ -53,7 +52,6 @@ export const testimonials = [
 			'Highly professional team! Their attention to detail and commitment made the project a success.',
 	},
 ]
-
 
 export const projects = [
 	{
@@ -73,9 +71,9 @@ export const projects = [
 		category: 'Frontend',
 	},
 	{
-		name: 'eCommerce Website',
-		photo: '/ecom.png',
-		url: 'https://ecommerce-com-gdx6.onrender.com/',
+		name: 'Admin Dashboard',
+		photo: '/admin.png',
+		url: 'https://admin-dashboard-bsjq.onrender.com/',
 		subText:
 			'An eCommerce website that enables users to shop from anywhere. Fully responsive with CRUD operations.',
 		category: 'Full Stack',
