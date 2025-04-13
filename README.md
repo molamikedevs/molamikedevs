@@ -77,14 +77,7 @@ I'm a **full-stack developer** based in **Baku, Azerbaijan**, with a passion for
     <td>🔗 <strong>LinkedIn:</strong></td>
     <td><a href="https://www.linkedin.com/in/lamin-foday-23a263344/">linkedin.com/in/lamin-foday</a></td>
   </tr>
-  <tr>
-    <td>🔗 <strong>Twitter (X):</strong></td>
-    <td><a href="https://x.com/molamikdevs">twitter.com/molamikdevs</a></td>
-  </tr>
-  <tr>
-    <td>🔗 <strong>Facebook:</strong></td>
-    <td><a href="https://www.facebook.com/profile.php?id=61572706933788">facebook.com/molamikdevs</a></td>
-  </tr>
+ 
 </table>
 
 
