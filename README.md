@@ -1,4 +1,4 @@
-<h1 align="center">👋 Hi, I'm <strong>Kevin Lamin Foday</strong></h1>
+<h1 align="center">👋 Hi, I'm <strong> Lamin Kevin Foday</strong></h1>
 
 <p align="center">
   🌟 <strong>Full-Stack Developer</strong> | 💻 <strong>Passionate Coder</strong> | 🚀 <strong>Tech Enthusiast</strong>
