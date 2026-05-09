@@ -1,89 +1,95 @@
-<h1 align="center">👋 Hi, I'm <strong> Lamin Kevin Foday</strong></h1>
+# 👋 Hi, I'm Lamin Kevin Foday
+
+### **React & Next.js Developer** based in Baku, Azerbaijan 🇦🇿
+Building performant, scalable web applications with modern tooling.
+
+📧 **Contact:** [molamikedevs@gmail.com](mailto:molamikedevs@gmail.com)
+
+---
+
+## 💡 About Me
+
+I'm a self-taught **Full Stack Developer** specializing in the **React and Next.js ecosystem**, with strong fundamentals in Vanilla JavaScript, OOP, and software architecture. My focus is on writing clean, maintainable code and building applications that are fast by default — not by accident.
+
+- 🎯 Currently deepening my expertise in React, Next.js, and full-stack patterns
+- 🌱 Studying **BSc Computer Science** at the University of the People
+- 💼 **Open to junior developer opportunities** (remote or on-site)
+- 📍 Based in Baku, Azerbaijan
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- **Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3
+- **Frameworks & Libraries:** React.js, Next.js
+- **Styling:** Tailwind CSS, Shadcn/ui, Framer Motion
+- **State & Data:** TanStack Query, React Hooks, Custom Hooks, Context API
+
+### Backend & Databases
+- **BaaS:** Appwrite, Supabase, Firebase
+- **Databases:** MongoDB, PostgreSQL
+- **APIs:** REST APIs, Node.js
+
+### Tools & Workflow
+- **Version Control:** Git, GitHub
+- **Editors:** VS Code
+- **Deployment:** Vercel
+- **Package Managers:** npm, pnpm
+- **Design:** Figma
+
+### Concepts
+- Object-Oriented Programming (OOP)
+- MVC Architecture
+- Single Responsibility Principle
+- Component-Based Design
+- Responsive Web Design
+- Web Performance Optimization
+
+---
+
+## 🚀 Featured Projects
+
+### 🌟 [Modevs Kanban](https://modevs-kanban.vercel.app)
+Enterprise-grade Kanban board with complex drag-and-drop state management, fractional database indexing for efficient card reordering, and React Query caching.
+**Stack:** `React` `TanStack Query` `Custom Hooks` `Appwrite` `Tailwind CSS`
+
+### 🎬 [TinyMoviez Dashboard](https://tiny-moviez-five.vercel.app)
+Data-driven media dashboard built from scratch using a custom Vanilla JavaScript MVC architecture. Features a custom pagination engine, immutable bookmarking, an LRU cache for recent search history, and a multi-level filter/sort engine — all navigated through pure DOM manipulation.
+**Stack:** `Vanilla JavaScript` `OOP` `MVC Architecture` `TMDB API`
+
+### 🎨 [Portfolio](https://molamikedevs.vercel.app)
+My personal portfolio showcasing my work, skills, and engineering philosophy.
+**Stack:** `Next.js` `TypeScript` `Tailwind CSS`
+
+📂 **Explore more:** [GitHub Repositories](https://github.com/molamikedevs?tab=repositories)
+
+---
+
+## 📊 GitHub Stats
 
 <p align="center">
-  🌟 <strong>Full-Stack Developer</strong> | 💻 <strong>Passionate Coder</strong> | 🚀 <strong>Tech Enthusiast</strong>
+  <img src="https://github-readme-stats.vercel.app/api?username=molamikedevs&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
 </p>
 
 <p align="center">
-  📫 <strong>Contact me:</strong> <a href="mailto:molamikedevs@gmail.com">molamikedevs@gmail.com</a>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=molamikedevs&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 </p>
-
----
-
-## 💡 About Me  
-
-I'm a **full-stack developer** based in **Baku, Azerbaijan**, with a passion for building **scalable, high-performance web applications**. I specialize in **JavaScript, React, Next.js, and modern backend technologies**, always striving for **clean, efficient, and maintainable code**.  
-
-🔹 **Tech Enthusiast:** I love working on **open-source projects** and exploring the latest technologies.  
-🔹 **Problem Solver:** I enjoy tackling complex coding challenges and **optimizing performance**.  
-🔹 **Lifelong Learner:** Constantly improving my skills by building **real-world projects** and keeping up with **tech trends**.  
-
----
-
-## 🛠 Tech Stack  
-
-### **Programming Languages**  
-🔹 **JavaScript (ES6+)**, **TypeScript**    
-🔹 **Python**, **Java**  
-
-### **Frontend**  
-🔹 **JavaScript (ES6+)**, **TypeScript**    
-🔹 **React.js**, **Next.js**  
-🔹 **Tailwind CSS**, **Framer Motion**  
- 🔹 **SASS**, **Shadui**  
-
-### **Backend & Databases**  
-🔹 **Node.js**, **Express.js**  
-🔹 **Django**, **PostgreSQL**, **MongoDB**, **Supabase**  
-🔹 **Appwrite**,   
-
-### **Tools & Other**  
-🔹 **Git & GitHub**, **VS Code**, **Eclipse**, **Figma**  
-🔹 **Figma**, **Vercel**, **Render**, **Docker**  
-🔹 **Pycharm**, **Photoshop**, **Netlify**, **Postman** 
-
----
-
-## 🚀 Projects  
-
-🌟 **[Modern Developer Portfolio](https://modernportfoliodevs-molamikedevs-projects.vercel.app/)** – A **visually stunning** portfolio with **3D elements**  
-🌟 **[Movie Trending App](https://movies-app-4bz6.onrender.com)** – Real-time movie trends powered by **Appwrite & TMDB API**  
-🌟 **[Xora Landing Page](https://xora-landding-page.onrender.com/)** – Stunning UI/UX **Landing page**  
-🌟 **[E-commerce Platform (Coming Soon)]** – A full-stack **Next.js + Appwrite** e-commerce project**  
-🌟 **[Booking Reserversation (Coming Soon)]** – A full-stack **Next.js + Supabase**, **Next Auth**
-
-🔗 **Explore more projects:** [GitHub Repositories](https://github.com/molamikedevs?tab=repositories)  
-
----
-
-## 📈 GitHub Stats  
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=molamikedevs&theme=radical&hide_border=true" alt="GitHub Streak" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api?username=molamikedevs&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=molamikedevs&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
 ---
 
-## 🤝 Let's Connect  
+## 🤝 Let's Connect
 
-<table>
-  <tr>
-    <td>🔗 <strong>Portfolio:</strong></td>
-    <td><a href="http://www.molamikedevs.com">www.molamikedevs.com</a></td>
-  </tr>
-  <tr>
-    <td>🔗 <strong>LinkedIn:</strong></td>
-    <td><a href="https://www.linkedin.com/in/lamin-foday-23a263344/">linkedin.com/in/lamin-foday</a></td>
-  </tr>
- 
-</table>
-
-
-
-
+- 🌐 **Portfolio:** [molamikedevs.vercel.app](https://molamikedevs.vercel.app)
+- 💼 **LinkedIn:** [Lamin Foday](https://www.linkedin.com/in/molamikedevs)
+- 📧 **Email:** molamikedevs@gmail.com
 
 ---
 
-🚀 **Open to remote work & collaboration!** Feel free to reach out if you're interested in working together. 😊
+<p align="center">
+  💬 <em>Open to junior developer opportunities — let's build something great together.</em>
+</p>
