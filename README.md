@@ -69,10 +69,9 @@ My personal portfolio showcasing my work, skills, and engineering philosophy.
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=molamikedevs&show_icons=true&theme=github_dark&hide_border=true&count_private=true" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=molamikedevs&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Top Languages" height="180" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=molamikedevs&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b27&langs_count=8" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=molamikedevs&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b27&langs_count=8" alt="Top Languages" height="180" />
 </p>
-
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=molamikedevs&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
