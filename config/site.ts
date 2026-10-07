@@ -18,7 +18,7 @@ export const siteConfig = {
   },
   cv: {
     path: '/cv.pdf',
-    available: false,
+    available: true,
   },
 } as const;
 

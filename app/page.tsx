@@ -1,6 +1,7 @@
 import About from '@/components/sections/about';
 import Activity from '@/components/sections/activity';
 import Contact from '@/components/sections/contact';
+import Footer from '@/components/sections/footer';
 import Header from '@/components/sections/header';
 import Projects from '@/components/sections/projects';
 import Stack from '@/components/sections/stack';
@@ -17,6 +18,8 @@ export default function Home() {
         <Stack />
         <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }
