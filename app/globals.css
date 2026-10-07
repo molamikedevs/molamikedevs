@@ -47,17 +47,10 @@
 }
 
 @theme {
-  /* Width of the content column that every section sits in. */
-  --container-page: 46rem;
-
-  /* Scrolling row of tech logos. Use as motion-safe:animate-marquee. */
-  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
-
-  @keyframes marquee {
-    to {
-      transform: translateX(-50%);
-    }
-  }
+  /* Width of the page: the margin column plus the content beside it. */
+  --container-page: 60rem;
+  /* Width of the margin column. */
+  --spacing-rail: 10rem;
 }
 
 /* Light theme: navy ink on warm paper, cobalt accent. */
@@ -89,7 +82,7 @@
 
   /* Accent for text and icons: links, highlights, active states. */
   --brand: #2b3fe0;
-  /* Diagonal lines in the page gutters. */
+  /* Diagonal lines that texture the margin column. */
   --hatch: oklch(0.875 0.012 85);
 
   /* Contribution graph, from no activity (1) to most activity (5). */
@@ -164,7 +157,7 @@
   }
 }
 
-/* Diagonal hatching for the gutters on either side of the content column. */
+/* Diagonal hatching that textures the margin column. */
 @utility hatch {
   background-image: repeating-linear-gradient(
     -45deg,
