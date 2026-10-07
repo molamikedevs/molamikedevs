@@ -45,3 +45,30 @@ export function getMonthLabels(days: ContributionDay[], offset: number) {
 
   return labels;
 }
+
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_REQUESTS = 15;
+
+const requestTimes = new Map<string, number[]>();
+
+// Allows MAX_REQUESTS per key inside a sliding window. It lives in memory, so
+// each server instance counts separately: enough to stop casual abuse of the
+// chat route, not a replacement for a shared store.
+export function isRateLimited(key: string) {
+  const now = Date.now();
+  const recent = (requestTimes.get(key) ?? []).filter(
+    (time) => now - time < WINDOW_MS,
+  );
+
+  if (recent.length >= MAX_REQUESTS) {
+    requestTimes.set(key, recent);
+    return true;
+  }
+
+  // Keep the map from growing without limit on a long-lived instance.
+  if (requestTimes.size > 5000) requestTimes.clear();
+
+  recent.push(now);
+  requestTimes.set(key, recent);
+  return false;
+}

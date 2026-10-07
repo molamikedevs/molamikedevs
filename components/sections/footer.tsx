@@ -9,7 +9,8 @@ export default function Footer() {
   return (
     <footer>
       <SectionRow className="border-b-0">
-        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 font-mono text-xs text-muted-foreground">
+        {/* The bottom padding keeps the row clear of the floating Ask AI button. */}
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 font-mono text-xs text-muted-foreground max-lg:pb-14">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}
           </p>
