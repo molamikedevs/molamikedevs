@@ -8,6 +8,10 @@ export const siteConfig = {
   description:
     'Software developer building fast, accessible web apps with React, Next.js and TypeScript, backed by PostgreSQL and Supabase.',
   email: 'molamikedevs@gmail.com',
+  availability: {
+    open: true,
+    label: 'Open to junior roles',
+  },
   links: {
     github: 'https://github.com/molamikedevs',
     linkedin: 'https://www.linkedin.com/in/molamikedevs',
