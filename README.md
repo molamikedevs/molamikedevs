@@ -72,7 +72,10 @@ A movie dashboard built from scratch with a custom Vanilla JavaScript MVC archit
 
 📂 **Explore more:** [GitHub Repositories](https://github.com/molamikedevs?tab=repositories)
 
+
+
 ## 📊 GitHub Stats
+
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=molamikedevs&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
