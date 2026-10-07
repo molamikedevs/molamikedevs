@@ -1,4 +1,21 @@
 import { siteConfig } from '@/config/site';
+import {
+  Code2,
+  Database,
+  FileJson,
+  GitBranch,
+  Globe,
+  Layout,
+  MessageSquare,
+  Monitor,
+  Palette,
+  PenTool,
+  RefreshCw,
+  Server,
+  Terminal,
+  Triangle,
+  Zap,
+} from 'lucide-react';
 
 export const links = [
   { label: 'GitHub', href: siteConfig.links.github },
@@ -46,5 +63,43 @@ export const projects: Project[] = [
     liveUrl: 'https://tiny-moviez-five.vercel.app',
     codeUrl: 'https://github.com/molamikedevs/tiny-moviez',
     image: '/tiny-movie.png',
+  },
+];
+
+export const skillGroups: SkillGroup[] = [
+  {
+    label: 'Frontend',
+    skills: [
+      { name: 'React', icon: Code2 },
+      { name: 'Next.js', icon: Globe },
+      { name: 'TypeScript', icon: Terminal },
+      { name: 'JavaScript', icon: FileJson },
+      { name: 'HTML5/CSS3', icon: Layout },
+      { name: 'Tailwind CSS', icon: Palette },
+      { name: 'Responsive Design', icon: Monitor },
+    ],
+  },
+  {
+    label: 'Backend',
+    skills: [
+      { name: 'Node.js', icon: Server },
+      { name: 'REST APIs', icon: Zap },
+      { name: 'Appwrite', icon: Database },
+      { name: 'Supabase', icon: Database },
+      { name: 'MongoDB', icon: Database },
+      { name: 'PostgreSQL', icon: Database },
+      { name: 'TanStack Query', icon: RefreshCw },
+    ],
+  },
+  {
+    label: 'Tools',
+    skills: [
+      { name: 'Git', icon: GitBranch },
+      { name: 'GitHub', icon: GitBranch },
+      { name: 'Vercel', icon: Triangle },
+      { name: 'Figma', icon: PenTool },
+      { name: 'VS Code', icon: FileJson },
+      { name: 'Postman', icon: MessageSquare },
+    ],
   },
 ];
