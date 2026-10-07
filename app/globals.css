@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-mono:
+    var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-hatch: var(--hatch);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@theme {
+  /* Width of the content column that every section sits in. */
+  --container-page: 46rem;
+
+  /* Scrolling row of tech logos. Use as motion-safe:animate-marquee. */
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Light theme: navy ink on warm paper, cobalt accent. */
+:root {
+  --radius: 0.5rem;
+
+  /* The one off-white. It is the light background and the dark theme's text,
+     so change it here and both themes follow. */
+  --paper: oklch(0.962 0.009 85);
+
+  --background: var(--paper);
+  --foreground: #0e1a2b;
+  --card: var(--paper);
+  --card-foreground: #0e1a2b;
+  --popover: oklch(0.985 0.006 85);
+  --popover-foreground: #0e1a2b;
+  --primary: #2b3fe0;
+  --primary-foreground: var(--paper);
+  --secondary: oklch(0.925 0.011 85);
+  --secondary-foreground: #0e1a2b;
+  --muted: oklch(0.935 0.01 85);
+  --muted-foreground: #4b5565;
+  --accent: oklch(0.915 0.012 85);
+  --accent-foreground: #0e1a2b;
+  --destructive: #c62f1c;
+  --border: oklch(0.83 0.014 85);
+  --input: oklch(0.83 0.014 85);
+  --ring: #2b3fe0;
+
+  /* Accent for text and icons: links, highlights, active states. */
+  --brand: #2b3fe0;
+  /* Diagonal lines in the page gutters. */
+  --hatch: oklch(0.875 0.012 85);
+
+  /* Contribution graph, from no activity (1) to most activity (5). */
+  --chart-1: oklch(0.9 0.012 85);
+  --chart-2: #b3c0f5;
+  --chart-3: #7f95ee;
+  --chart-4: #4a63e6;
+  --chart-5: #2433b3;
+}
+
+/* Dark theme: the inverse. Warm paper on navy ink. */
+.dark {
+  --background: #0a1220;
+  --foreground: var(--paper);
+  --card: #0e1a2b;
+  --card-foreground: var(--paper);
+  --popover: #101d31;
+  --popover-foreground: var(--paper);
+  --primary: #2f62e6;
+  --primary-foreground: var(--paper);
+  --secondary: #16233a;
+  --secondary-foreground: var(--paper);
+  --muted: #131f33;
+  --muted-foreground: #93a0b5;
+  --accent: #18263f;
+  --accent-foreground: var(--paper);
+  --destructive: #f2705f;
+  --border: #25334c;
+  --input: #2c3c58;
+  --ring: #7f9bff;
+
+  --brand: #8ea8ff;
+  --hatch: #18243a;
+
+  --chart-1: #162239;
+  --chart-2: #24408f;
+  --chart-3: #3360d8;
+  --chart-4: #6688f7;
+  --chart-5: #b4c4ff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--brand) 30%, transparent);
+  }
+}
+
+/* Diagonal hatching for the gutters on either side of the content column. */
+@utility hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--hatch) 0,
+    var(--hatch) 1px,
+    transparent 1px,
+    transparent 7px
+  );
+}
