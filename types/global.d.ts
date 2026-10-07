@@ -7,3 +7,13 @@ type Project = {
   codeUrl: string;
   image?: string;
 };
+
+type Skill = {
+  name: string;
+  icon: LucideIcon;
+};
+
+type SkillGroup = {
+  label: string;
+  skills: Skill[];
+};
