@@ -1,3 +1,4 @@
+import SectionRow from '@/components/common/section-row';
 import Header from '@/components/sections/header';
 
 export default function Home() {
@@ -6,11 +7,11 @@ export default function Home() {
       <Header />
 
       <main id="main" className="flex flex-1 flex-col">
-        <section className="px-5 py-8 sm:px-8">
+        <SectionRow className="flex-1 border-b-0">
           <p className="font-mono text-sm text-muted-foreground">
             Portfolio in progress.
           </p>
-        </section>
+        </SectionRow>
       </main>
     </>
   );

@@ -16,7 +16,7 @@ export default function RootLayout({
       className={`${schibsted.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col">
+      <body className="relative isolate flex min-h-full flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -30,19 +30,16 @@ export default function RootLayout({
             Skip to content
           </a>
 
-          <div className="flex flex-1 justify-center">
-            <div
-              aria-hidden="true"
-              className="hatch hidden w-10 shrink-0 sm:block"
-            />
-            <div className="flex w-full max-w-page min-w-0 flex-col border-dashed sm:border-x">
-              {children}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 hidden sm:block"
+          >
+            <div className="mx-auto h-full max-w-page">
+              <div className="hatch h-full w-rail" />
             </div>
-            <div
-              aria-hidden="true"
-              className="hatch hidden w-10 shrink-0 sm:block"
-            />
           </div>
+
+          {children}
         </ThemeProvider>
       </body>
     </html>
