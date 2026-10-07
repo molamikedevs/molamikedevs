@@ -1,4 +1,5 @@
 import SectionRow from '@/components/common/section-row';
+import About from '@/components/sections/about';
 import Header from '@/components/sections/header';
 
 export default function Home() {
@@ -7,9 +8,11 @@ export default function Home() {
       <Header />
 
       <main id="main" className="flex flex-1 flex-col">
+        <About />
+
         <SectionRow className="flex-1 border-b-0">
           <p className="font-mono text-sm text-muted-foreground">
-            Portfolio in progress.
+            More sections coming.
           </p>
         </SectionRow>
       </main>
