@@ -6,6 +6,7 @@ import {
   GitBranch,
   Globe,
   Layout,
+  type LucideIcon,
   MessageSquare,
   Monitor,
   Palette,
@@ -65,6 +66,16 @@ export const projects: Project[] = [
     image: '/tiny-movie.png',
   },
 ];
+
+type Skill = {
+  name: string;
+  icon: LucideIcon;
+};
+
+type SkillGroup = {
+  label: string;
+  skills: Skill[];
+};
 
 export const skillGroups: SkillGroup[] = [
   {
