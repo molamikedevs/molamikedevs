@@ -1,6 +1,6 @@
-import SectionRow from '@/components/common/section-row';
 import About from '@/components/sections/about';
 import Activity from '@/components/sections/activity';
+import Contact from '@/components/sections/contact';
 import Header from '@/components/sections/header';
 import Projects from '@/components/sections/projects';
 import Stack from '@/components/sections/stack';
@@ -15,12 +15,7 @@ export default function Home() {
         <Projects />
         <Activity />
         <Stack />
-
-        <SectionRow className="flex-1 border-b-0">
-          <p className="font-mono text-sm text-muted-foreground">
-            More sections coming.
-          </p>
-        </SectionRow>
+        <Contact />
       </main>
     </>
   );
