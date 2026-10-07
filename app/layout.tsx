@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'next-themes';
 
+import ChatWidget from '@/components/chat/chat-widget';
 import { jetbrainsMono, newsreader, schibsted } from '@/config/fonts';
 
 import './globals.css';
@@ -30,6 +31,8 @@ export default function RootLayout({
             Skip to content
           </a>
 
+          {/* Hatched texture behind the margin column, drawn once so the
+              pattern runs unbroken down the whole page. */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 -z-10 hidden sm:block"
@@ -40,6 +43,8 @@ export default function RootLayout({
           </div>
 
           {children}
+
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>
