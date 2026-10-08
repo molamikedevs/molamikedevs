@@ -38,6 +38,10 @@ export default function Header() {
                 </span>
               )}
             </p>
+
+            <p className="mt-2 font-serif text-[17px] leading-6 text-foreground/80 italic">
+              {siteConfig.person}
+            </p>
           </div>
 
           <ThemeToggle />

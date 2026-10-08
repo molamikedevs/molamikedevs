@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from 'next';
 
 export const siteConfig = {
   name: 'Molamike Devs',
+  person: 'Lamin Foday',
   shortName: 'molamike',
   role: 'Software Developer',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://molamikedevs.com',
   description:
     'Software developer building fast, accessible web apps with React, Next.js and TypeScript, backed by PostgreSQL and Supabase.',
   email: 'molamikedevs@gmail.com',
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  authors: [{ name: siteConfig.name, url: siteConfig.url }],
-  creator: siteConfig.name,
+  authors: [{ name: siteConfig.person, url: siteConfig.url }],
+  creator: siteConfig.person,
   publisher: siteConfig.name,
   referrer: 'origin-when-cross-origin',
   keywords: [
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
     'Next.js Developer',
     'TypeScript',
     siteConfig.name,
+    siteConfig.person,
   ],
 
   alternates: {
