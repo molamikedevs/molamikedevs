@@ -1,6 +1,6 @@
-# 👋 Hi, I'm Lamin Kevin Foday
+# 👋 Hi, I'm Lamin Foday
 
-### **React & Next.js Developer**
+### **Software Developer”**
 
 I build full-stack web applications with React, Next.js, TypeScript and Supabase.
 
