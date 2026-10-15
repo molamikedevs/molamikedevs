@@ -18,11 +18,6 @@ export const siteConfig = {
     open: true,
     label: 'Open to junior roles',
   },
-  location: {
-    label: 'Baku, relocating to Dubai, January 2027',
-    city: 'Baku',
-    countryCode: 'AZ',
-  },
   links: {
     github: 'https://github.com/molamikedevs',
     linkedin: 'https://www.linkedin.com/in/molamikedevs',
