@@ -1,12 +1,14 @@
+import { MapPin } from 'lucide-react';
 import Image from 'next/image';
 
+import AskAiButton from '@/components/chat/ask-ai-button';
 import SectionRow from '@/components/common/section-row';
 import ThemeToggle from '@/components/theme/theme-toggle';
 import { siteConfig } from '@/config/site';
 
 export default function Header() {
   return (
-    <header>
+    <header className="pt-[var(--safe-top)]">
       <SectionRow
         rail={
           <Image
@@ -20,7 +22,7 @@ export default function Header() {
         }
       >
         <div className="flex items-start justify-between gap-4">
-          <div>
+          <div className="min-w-0">
             <h1 className="font-serif text-4xl leading-none tracking-tight sm:text-5xl">
               {siteConfig.name}
             </h1>
@@ -42,10 +44,17 @@ export default function Header() {
             <p className="mt-2 font-serif text-[17px] leading-6 text-foreground/80 italic">
               {siteConfig.person}
             </p>
+
+            <p className="mt-1.5 inline-flex items-start gap-1.5 text-sm leading-5 text-muted-foreground">
+              <MapPin aria-hidden="true" className="mt-0.5 size-3.5 shrink-0" />
+              {siteConfig.location.label}
+            </p>
           </div>
 
           <ThemeToggle />
         </div>
+
+        <AskAiButton className="mt-5 sm:hidden" />
       </SectionRow>
     </header>
   );

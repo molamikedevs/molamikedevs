@@ -1,6 +1,7 @@
+import { cn } from 'cn';
 import { ArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
 
+import ProjectFrame from '@/components/common/project-frame';
 import RailLabel from '@/components/common/rail-label';
 import RailNote from '@/components/common/rail-note';
 import SectionRow from '@/components/common/section-row';
@@ -19,25 +20,14 @@ export default function Projects() {
             </>
           }
         >
-          <article className="grid gap-5 sm:grid-cols-[11rem_1fr]">
-            {project.image ? (
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg border bg-muted">
-                <Image
-                  src={project.image}
-                  alt={`Screenshot of ${project.name}`}
-                  fill
-                  sizes="(min-width: 640px) 11rem, 100vw"
-                  className="object-cover object-top"
-                />
-              </div>
-            ) : (
-              <div
-                aria-hidden="true"
-                className="hatch aspect-[4/3] rounded-lg border bg-muted"
-              />
-            )}
+          <article className="grid gap-6 sm:grid-cols-[16rem_1fr] sm:gap-7">
+            <ProjectFrame
+              name={project.name}
+              desktop={project.desktop}
+              phone={project.phone}
+            />
 
-            <div>
+            <div className="min-w-0">
               <h3 className="text-lg leading-6 font-semibold">
                 {project.name}
               </h3>
@@ -46,35 +36,54 @@ export default function Projects() {
                 {project.description}
               </p>
 
+              {project.decision && (
+                <p className="mt-3 text-[15px] leading-7">
+                  <span className="font-medium">A decision I made: </span>
+                  <span className="text-muted-foreground">
+                    {project.decision}
+                  </span>
+                </p>
+              )}
+
               <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-muted-foreground">
                 {project.stack.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
 
-              <p className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-brand underline underline-offset-4"
-                >
-                  Open the live app
-                  <span className="sr-only"> for {project.name}</span>
-                  <ArrowUpRight aria-hidden="true" className="size-3.5" />
-                </a>
+              {project.demoNote && (
+                <p className="mt-4 font-serif text-[15px] leading-6 text-brand italic">
+                  {project.demoNote}
+                </p>
+              )}
 
-                <a
-                  href={project.codeUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 underline underline-offset-4"
-                >
-                  Read the code
-                  <span className="sr-only"> for {project.name}</span>
-                  <ArrowUpRight aria-hidden="true" className="size-3.5" />
-                </a>
-              </p>
+              <ul
+                className={cn(
+                  'flex flex-wrap gap-x-5 text-sm font-medium',
+                  project.demoNote ? 'mt-1' : 'mt-3',
+                )}
+              >
+                {project.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={cn(
+                        'inline-flex min-h-11 items-center gap-1 underline underline-offset-4 sm:min-h-8',
+                        link.primary && 'text-brand',
+                      )}
+                    >
+                      {link.label}
+                      <span className="sr-only">
+                        {' '}
+                        for {project.name}, opens in a new tab
+                      </span>
+                      <ArrowUpRight aria-hidden="true" className="size-3.5" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </article>
         </SectionRow>

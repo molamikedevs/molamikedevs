@@ -31,22 +31,69 @@ export const links = [
     : []),
 ];
 
+export type ProjectImage = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+type ProjectLink = {
+  label: string;
+  href: string;
+  primary?: boolean;
+};
+
+export type Project = {
+  name: string;
+  note: string;
+  description: string;
+  decision?: string;
+  demoNote?: string;
+  stack: string[];
+  links: ProjectLink[];
+  desktop?: ProjectImage;
+  phone?: ProjectImage;
+};
+
 export const projects: Project[] = [
   {
     name: 'Dersly',
     note: 'I teach my own 48 students on this.',
     description:
       'A learning platform I built for my English students. They sign in for homework and materials and take a placement test that sets their level. I manage students, groups and assignments from one place.',
+    demoNote: 'Real students use Dersly, so the demo runs on sample data.',
     stack: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'shadcn/ui'],
-    liveUrl: 'https://dersly.pro',
-    codeUrl: 'https://github.com/molamikedevs/dersly',
-    image: '/dersly.png',
+    links: [
+      {
+        label: 'View teacher demo',
+        href: 'https://dersly.pro/demo/teacher',
+        primary: true,
+      },
+      {
+        label: 'View student demo',
+        href: 'https://dersly.pro/demo/student',
+        primary: true,
+      },
+      {
+        label: 'Read the code',
+        href: 'https://github.com/molamikedevs/dersly',
+      },
+    ],
+    desktop: {
+      src: '/dersly.png',
+      width: 1440,
+      height: 900,
+      alt: "Dersly teacher overview: today's lessons, the next lesson card and upcoming classes",
+    },
   },
   {
     name: 'Estatly',
     note: 'Roles, approvals and server-side tables.',
     description:
       'An internal property management platform for real estate agencies, with role-based permissions, a property approval workflow, optimistic updates and a dashboard powered by Postgres functions.',
+    decision:
+      'Every permission lives in Postgres row-level security, and forms are checked with Zod in the browser and again on the server. Hiding a button is never the only guard.',
     stack: [
       'React',
       'TypeScript',
@@ -55,19 +102,49 @@ export const projects: Project[] = [
       'TanStack Query',
       'Tailwind CSS',
     ],
-    liveUrl: 'https://estatly-three.vercel.app',
-    codeUrl: 'https://github.com/molamikedevs/estatly',
-    image: '/estatly.png',
+    links: [
+      {
+        label: 'Open the live app',
+        href: 'https://estatly-three.vercel.app',
+        primary: true,
+      },
+      {
+        label: 'Read the code',
+        href: 'https://github.com/molamikedevs/estatly',
+      },
+    ],
+    desktop: {
+      src: '/estatly.png',
+      width: 1440,
+      height: 900,
+      alt: 'Estatly agency dashboard: property, client and viewing totals with charts of listings by status and the client pipeline',
+    },
   },
   {
     name: 'TinyMoviez Dashboard',
     note: 'No framework, on purpose.',
     description:
       'A movie dashboard built from scratch on a custom Vanilla JavaScript MVC architecture: pagination, bookmarks, recent search history and multi-level filtering, all through direct DOM manipulation.',
+    decision:
+      'I left out frameworks on purpose to show I can structure an app myself, with object-oriented models, views and controllers and no library doing that work for me.',
     stack: ['Vanilla JavaScript', 'OOP', 'MVC Architecture', 'TMDB API'],
-    liveUrl: 'https://tiny-moviez-five.vercel.app',
-    codeUrl: 'https://github.com/molamikedevs/tiny-moviez',
-    image: '/tiny-movie.png',
+    links: [
+      {
+        label: 'Open the live app',
+        href: 'https://tiny-moviez-five.vercel.app',
+        primary: true,
+      },
+      {
+        label: 'Read the code',
+        href: 'https://github.com/molamikedevs/tiny-moviez',
+      },
+    ],
+    desktop: {
+      src: '/tiny-movie.png',
+      width: 1440,
+      height: 900,
+      alt: 'TinyMoviez home screen: a featured title, trending TV shows and a coming soon list',
+    },
   },
 ];
 
