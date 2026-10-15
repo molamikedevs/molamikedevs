@@ -7,8 +7,13 @@ export const siteConfig = {
   role: 'Software Developer',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://molamikedevs.com',
   description:
-    'Software developer building fast, accessible web apps with React, Next.js and TypeScript, backed by PostgreSQL and Supabase.',
+    'Lamin Foday, software developer in Baku relocating to Dubai. I build fast, accessible web apps with React, Next.js and TypeScript, backed by PostgreSQL and Supabase.',
   email: 'molamikedevs@gmail.com',
+  location: {
+    label: 'Baku, relocating to Dubai, January 2027',
+    city: 'Baku',
+    countryCode: 'AZ',
+  },
   availability: {
     open: true,
     label: 'Open to junior roles',
@@ -21,9 +26,14 @@ export const siteConfig = {
     path: '/cv.pdf',
     available: true,
   },
+  // Browser bar colors. Must match --background in globals.css for each theme.
+  themeColors: {
+    light: '#f5f2ec',
+    dark: '#0a1220',
+  },
 } as const;
 
-const title = `${siteConfig.name} | ${siteConfig.role}`;
+const title = `${siteConfig.name} | ${siteConfig.person}, ${siteConfig.role}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -43,6 +53,8 @@ export const metadata: Metadata = {
     'React Developer',
     'Next.js Developer',
     'TypeScript',
+    'Junior Developer Dubai',
+    'Baku',
     siteConfig.name,
     siteConfig.person,
   ],
@@ -60,30 +72,45 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 
   openGraph: {
-    type: 'website',
+    type: 'profile',
     locale: 'en_US',
     url: '/',
     siteName: siteConfig.name,
     title,
     description: siteConfig.description,
+    firstName: 'Lamin',
+    lastName: 'Foday',
+    username: siteConfig.shortName,
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name}, ${siteConfig.role}`,
+        alt: `${siteConfig.name}, ${siteConfig.person}, ${siteConfig.role}`,
       },
     ],
   },
 
+  // Uses the same image as Open Graph.
   twitter: {
     card: 'summary_large_image',
     title,
     description: siteConfig.description,
-    images: ['/og-image.png'],
+    images: [
+      {
+        url: '/og-image.png',
+        alt: `${siteConfig.name}, ${siteConfig.person}, ${siteConfig.role}`,
+      },
+    ],
   },
 
   icons: {
@@ -98,7 +125,37 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0a1220',
+  // Dark is the default theme. components/theme-color.tsx updates this
+  // when the visitor switches theme.
+  themeColor: siteConfig.themeColors.dark,
   width: 'device-width',
   initialScale: 1,
+  // Lets content use the full screen on notched iPhones. Safe-area padding
+  // keeps fixed elements clear of the notch and home indicator.
+  viewportFit: 'cover',
+};
+
+export const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: siteConfig.person,
+  alternateName: siteConfig.name,
+  jobTitle: siteConfig.role,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  email: `mailto:${siteConfig.email}`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: siteConfig.location.city,
+    addressCountry: siteConfig.location.countryCode,
+  },
+  sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
+  knowsAbout: [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'JavaScript',
+    'PostgreSQL',
+    'Supabase',
+  ],
 };

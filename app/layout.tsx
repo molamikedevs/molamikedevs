@@ -1,7 +1,9 @@
 import { ThemeProvider } from 'next-themes';
 
 import ChatWidget from '@/components/chat/chat-widget';
+import ThemeColor from '@/components/theme/theme-color';
 import { jetbrainsMono, newsreader, schibsted } from '@/config/fonts';
+import { personJsonLd } from '@/config/site';
 
 import './globals.css';
 export { metadata, viewport } from '@/config/site';
@@ -18,12 +20,21 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="relative isolate flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
+          <ThemeColor />
+
           <a
             href="#main"
             className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-md focus:bg-card focus:px-4 focus:py-2 focus:font-medium focus:text-foreground"

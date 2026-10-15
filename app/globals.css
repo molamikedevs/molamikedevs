@@ -58,8 +58,15 @@
   --radius: 0.5rem;
 
   /* The one off-white. It is the light background and the dark theme's text,
-     so change it here and both themes follow. */
+     so change it here and both themes follow. Its hex value (#f5f2ec) is
+     also in siteConfig.themeColors for the phone's browser bar. */
   --paper: oklch(0.962 0.009 85);
+
+  /* Space kept clear of the notch and the home indicator on phones. */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
 
   --background: var(--paper);
   --foreground: #0e1a2b;
@@ -95,6 +102,7 @@
 
 /* Dark theme: the inverse. Warm paper on navy ink. */
 .dark {
+  /* Also in siteConfig.themeColors for the phone's browser bar. */
   --background: #0a1220;
   --foreground: var(--paper);
   --card: #0e1a2b;
@@ -131,10 +139,18 @@
 
   html {
     @apply font-sans antialiased;
+    /* Stops iOS from enlarging text when the phone turns sideways. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Safety net: nothing can make the page wider than the screen, so it
+       never drifts sideways on a phone. clip, unlike hidden, keeps
+       position: sticky working. */
+    overflow-x: clip;
   }
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
   }
 
   h1,
@@ -147,6 +163,17 @@
     text-wrap: pretty;
   }
 
+  /* Removes the grey flash on tap and the 300ms tap delay. Focus rings
+     below still show for keyboard users. */
+  a,
+  button,
+  [role='button'],
+  summary,
+  label {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
@@ -154,6 +181,17 @@
 
   ::selection {
     background-color: color-mix(in oklab, var(--brand) 30%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
