@@ -56,6 +56,8 @@ export type Project = {
   phone?: ProjectImage;
 };
 
+const ESTATLY_URL = 'https://estatly-three.vercel.app';
+
 export const projects: Project[] = [
   {
     name: 'Dersly',
@@ -82,9 +84,9 @@ export const projects: Project[] = [
     ],
     desktop: {
       src: '/dersly.png',
-      width: 1440,
-      height: 900,
-      alt: "Dersly teacher overview: today's lessons, the next lesson card and upcoming classes",
+      width: 2487,
+      height: 1318,
+      alt: "Dersly student home: tonight's lesson with a join button, lesson package progress and recent materials",
     },
   },
   {
@@ -94,6 +96,7 @@ export const projects: Project[] = [
       'An internal property management platform for real estate agencies, with role-based permissions, a property approval workflow, optimistic updates and a dashboard powered by Postgres functions.',
     decision:
       'Every permission lives in Postgres row-level security, and forms are checked with Zod in the browser and again on the server. Hiding a button is never the only guard.',
+    demoNote: 'No signup. Each link opens the demo as that role.',
     stack: [
       'React',
       'TypeScript',
@@ -104,8 +107,18 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: 'Open the live app',
-        href: 'https://estatly-three.vercel.app',
+        label: 'Try as admin',
+        href: `${ESTATLY_URL}/login?demo=admin`,
+        primary: true,
+      },
+      {
+        label: 'Try as manager',
+        href: `${ESTATLY_URL}/login?demo=manager`,
+        primary: true,
+      },
+      {
+        label: 'Try as agent',
+        href: `${ESTATLY_URL}/login?demo=agent`,
         primary: true,
       },
       {
@@ -115,9 +128,9 @@ export const projects: Project[] = [
     ],
     desktop: {
       src: '/estatly.png',
-      width: 1440,
-      height: 900,
-      alt: 'Estatly agency dashboard: property, client and viewing totals with charts of listings by status and the client pipeline',
+      width: 2423,
+      height: 1410,
+      alt: 'Estatly agency dashboard: listings waiting for approval, next viewings, and totals for published listings, offers, clients and viewings',
     },
   },
   {
@@ -141,9 +154,9 @@ export const projects: Project[] = [
     ],
     desktop: {
       src: '/tiny-movie.png',
-      width: 1440,
-      height: 900,
-      alt: 'TinyMoviez home screen: a featured title, trending TV shows and a coming soon list',
+      width: 2436,
+      height: 1394,
+      alt: 'TinyMoviez TV shows page: a featured show, trending TV shows and a coming soon list',
     },
   },
 ];
