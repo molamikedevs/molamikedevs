@@ -91,12 +91,12 @@ export const projects: Project[] = [
   },
   {
     name: 'Estatly',
-    note: 'Roles, approvals and server-side tables.',
+    note: 'Roles, approvals and database-level security.',
     description:
-      'An internal property management platform for real estate agencies, with role-based permissions, a property approval workflow, optimistic updates and a dashboard powered by Postgres functions.',
+      'An internal property management platform for real estate agencies, with three roles (admin, manager, agent), a property approval workflow, client and viewing management, and a live dashboard.',
     decision:
-      'Every permission lives in Postgres row-level security, and forms are checked with Zod in the browser and again on the server. Hiding a button is never the only guard.',
-    demoNote: 'No signup. Each link opens the demo as that role.',
+      'Every permission is enforced in Postgres with row-level security and triggers. Zod validates forms in the browser, and the database has the final say. Hiding a button is never the only guard.',
+    demoNote: 'No signup. Pick admin, manager or agent on the sign-in page.',
     stack: [
       'React',
       'TypeScript',
@@ -107,18 +107,8 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: 'Try as admin',
-        href: `${ESTATLY_URL}/login?demo=admin`,
-        primary: true,
-      },
-      {
-        label: 'Try as manager',
-        href: `${ESTATLY_URL}/login?demo=manager`,
-        primary: true,
-      },
-      {
-        label: 'Try as agent',
-        href: `${ESTATLY_URL}/login?demo=agent`,
+        label: 'Try the demo',
+        href: `${ESTATLY_URL}/login`,
         primary: true,
       },
       {

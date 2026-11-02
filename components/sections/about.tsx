@@ -8,9 +8,9 @@ export default function About() {
     <section aria-labelledby="about">
       <SectionRow rail={<RailLabel id="about">About</RailLabel>}>
         <p className="max-w-[62ch] text-lg leading-8">
-          I teach English, and I build the software my students learn on. I am a
-          self-taught developer working in React and Next.js, with solid
-          fundamentals in JavaScript and software architecture.
+          I teach English, and I build the software my students learn on. I’m a
+          self-taught frontend developer working with React, Next.js and
+          TypeScript, with Supabase and PostgreSQL behind them.
         </p>
 
         <ul className="mt-5 flex flex-wrap gap-2">
